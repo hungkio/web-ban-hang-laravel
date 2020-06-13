@@ -14,5 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('customer.index');
+});
+Route::get('login', function(){
+    return view('admin.dangnhap');
+});
+Route::get('gio-hang', function(){
+    return view('admin.gio-hang');
+});
+Route::get('thanh-toan', function(){
+    return view('admin.thanh-toan');
+});
+Route::get('tintuc', function(){
+    return view('customer.tintuc');
+});
+Route::get('sanpham', function(){
+    return view('customer.sanpham');
+});
+Route::get('lienhe', function(){
+    return view('customer.lienhe');
+});
+Route::get('gioi-thieu', function(){
+    return view('customer.Gioi-thieu');
+});
+Route::get('chitiettintuc', function(){
+    return view('customer.chitiettintuc');
+});
+Route::get('chitietsanpham', function(){
+    return view('customer.chitietsanpham');
 });
