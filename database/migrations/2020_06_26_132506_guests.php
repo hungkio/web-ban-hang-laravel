@@ -14,7 +14,7 @@ class Guests extends Migration
     public function up()
     {
          Schema:: create('Guests',function(Blueprint $table){
-            $table->increments('guest_id');
+            $table->increments('id');
             $table->string('name');
             $table->string('sex');
             $table->integer('age');
@@ -22,6 +22,7 @@ class Guests extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('sale_rank');
+            $table->timestamps();
         });
     }
 

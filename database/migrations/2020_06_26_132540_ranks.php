@@ -14,10 +14,11 @@ class Ranks extends Migration
     public function up()
     {
         Schema::create('Ranks',function(Blueprint $table){
-            $table->increments('rank_id');
+            $table->increments('id');
             $table->string('rank_name');
             $table->integer('bill_count');
             $table->integer('total_bills');
+            $table->timestamps();
         });
     }
 

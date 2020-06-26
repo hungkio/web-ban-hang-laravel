@@ -14,12 +14,13 @@ class Sales extends Migration
     public function up()
     {
         Schema::create('Sales', function (Blueprint $table) {
-            $table->increments('sale_id');
+            $table->increments('id');
             $table->string('sale_product_type');
             $table->string('sale_product_name');
             $table->date('sale_begin');
             $table->date('sale_end');
             $table->string('sale_rank');
+            $table->timestamps();
         });
     }
 
