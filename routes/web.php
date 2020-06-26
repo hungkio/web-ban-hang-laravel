@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@getLogout']);
+//login
+Route::get('login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
+Route::post('login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@postLogin']);
+
+Route::get('index', 'UserController@showProfile')->middleware('auth');
 
 Route::get('/', function () {
     return view('customer.index');
