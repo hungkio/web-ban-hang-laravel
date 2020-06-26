@@ -14,7 +14,7 @@ class Users extends Migration
     public function up()
     {
         Schema:: create('Users',function(Blueprint $table){
-            $table->increments('user_id');
+            $table->increments('id');
             $table->string('username');
             $table->string('password');
             $table->string('name');
@@ -23,6 +23,7 @@ class Users extends Migration
             $table->string('email');
             $table->string('phonenumber');
             $table->string('address');
+            $table->timestamps();
         });
     }
 
