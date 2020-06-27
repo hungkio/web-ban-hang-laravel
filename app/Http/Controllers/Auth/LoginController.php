@@ -35,8 +35,8 @@ class LoginController extends Controller
     public function postLogin(Request $request) {
         // Kiểm tra dữ liệu nhập vào
         $rules = [
-            'email' =>'required|email',
-            'password' => 'required|min:6'
+            'username' =>'required',
+            'password' => 'required'
         ];
         $validator = Validator::make($request->all(), $rules);
 
@@ -46,18 +46,18 @@ class LoginController extends Controller
             return redirect('login')->withErrors($validator)->withInput();
         } else {
             // Nếu dữ liệu hợp lệ sẽ kiểm tra trong csdl
-            $email = $request->input('email');
+            $username = $request->input('username');
             $password = $request->input('password');
             //dd($request);
-
+            // dd($request->all());
             if( Auth::attempt([
-                'email'  => $email,
-                'password' =>$password
+                'username'  => $username,
+                'password' => $password,
             ])) {
-                return redirect('index');
+                return redirect('product');
             } else {
                 // Kiểm tra không đúng sẽ hiển thị thông báo lỗi
-                Session::flash('error', __('messages.login_error'));
+                Session::flash('error', 'sai');
                 return redirect('login');
             }
         }

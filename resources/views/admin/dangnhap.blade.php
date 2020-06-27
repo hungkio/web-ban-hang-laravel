@@ -13,21 +13,30 @@
                 <div class="container-fluid">
                     <div class="coverFormLogin">
                         <form method="post" class="formLogin" id="formLogin">
+                            @csrf
                             <input type="hidden" name="action" value="loginAdmin">
                             <h2>Đăng nhập</h2>
                             <!-- <img src="image/logo11.png" alt="GoldBridge" class="logoLogin" />  -->
                             <div class="boxForm">
                                 <!-- <img src="image/userLogin.jpg" class="iconLogin" /> -->
-                                <input type="text" placeholder="Tên tài khoản..." class="txtLogin" name="accountLogin" required/>
+                                <input type="text" placeholder="Tên tài khoản..." class="txtLogin" name="username" required/>
                             </div>
                             <div class="boxForm">
                                 <!-- <img src="image/passLogin.jpg" class="iconLogin" /> -->
-                                <input type="password" value="" placeholder="Mật khẩu" class="txtLogin" name="passwordLogin" required/>
+                                <input type="password" value="" placeholder="Mật khẩu" class="txtLogin" name="password" required/>
                             </div>
-                            <div class="rowForm">
-                                <input type="checkbox" class="ckbForm" name="remember"/><label>Duy trì đăng nhập</label>
+                            <div class="boxForm">
+                                <div class="error-login">
+                                @if ( Session::has('error') )
+                                    <strong class="col-6 error-val">{{ Session::get('error') }}</strong>
+                                @endif
+                                @error('email')
+                                    <strong class="col-6 error-val" >{{ $message }}</strong>
+                                @enderror
                             </div>
-                            <button type="submit" class="btnLogin" value="1" name="btnLogin">Đăng nhập</button>
+                            </div>
+
+                            <button type="submit" class="btnLogin">Đăng nhập</button>
                         </form>
                     </div>
                 </div>
