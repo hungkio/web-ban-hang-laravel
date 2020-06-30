@@ -8,7 +8,8 @@ $(function () {
             method: 'get',
             data: $('#time_form').serialize(),
             success : function(res) {
-                $('#summary').text(res.memberAU)
+                $('#new_guest').text(res.guests)
+                $('#total_guest').text(res.totalGuests)
             }
         })
     });

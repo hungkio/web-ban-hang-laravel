@@ -19,10 +19,11 @@ class ReportController extends Controller
     }
     public function getData(Request $request)
     {
-        $guests = $this->guestRepository->getGuestConditon($request->only('start_date', 'end_date'));
-        dd($guests);
+        $guests = $this->guestRepository->getGuestConditon($request->only('start_date', 'end_date'))->count();
+        $totalGuests = $this->guestRepository->getAll()->count();
         return response()->json([
             'guests' => $guests,
+            'totalGuests' => $totalGuests,
         ]);
     }
 }

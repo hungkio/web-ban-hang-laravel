@@ -30,8 +30,8 @@
                     <div class="col-md-6">Tổng KH</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">10</div>
-                    <div class="col-md-6">20</div>
+                    <div class="col-md-6" id="new_guest">10</div>
+                    <div class="col-md-6" id="total_guest">20</div>
                 </div>
             </div>
         </div>
