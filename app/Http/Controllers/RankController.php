@@ -1,29 +1,28 @@
-
+<?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests\ProductRequest;
-use App\Repositories\ProductRepository;
+use App\Http\Requests\RankRequest;
+use App\Repositories\RankRepository;
 
 class GuestController extends Controller
 {
-    protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+    protected $rankReporsitory;
+    public function __construct(RankRepository $rankReporsitory)
     {
-        $this->productReporsitory = $productReporsitory;
+        $this->rankReporsitory = $rankReporsitory;
     }
     public function edit($id)
     {
-        $rank = $this->productReporsitory->find($id);
+        $rank = $this->rankReporsitory->find($id);
         return view('rank.edit', compact('rank'));
     }
-    public function store(ProductRequest $request)
+    public function store(RankRequest $request)
     {
         try {
-            $data = array_merge(['' => '1'], $request->all());
-            $this->productReporsitory->create($data);
+            $data = array_merge(['rank_name' => '1'], $request->all());
+            $this->rankReporsitory->create($data);
             return redirect()->route('rank.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
@@ -37,7 +36,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->productReporsitory->getAll();
+        $rank = $this->rankReporsitory->getAll();
         return view('rank.index', compact('ranks'));
     }
 
@@ -58,10 +57,10 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(RankRequest $request, $id)
     {
         try {
-            $this->productReporsitory->update($id, $request->only('rank_name', 'bill_count', 'total_bills'));
+            $this->rankReporsitory->update($id, $request->only('rank_name', 'bill_count', 'total_bills'));
             return redirect()->route('rank.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
@@ -78,7 +77,7 @@ class GuestController extends Controller
     public function destroy($id)
     {
         try {
-            $this->productReporsitory->delete($id);
+            $this->rankReporsitory->delete($id);
             return redirect()->route('rank.index')
             ->with('success', 'Deleted Success!');
         } catch (Exception $e) {
@@ -86,14 +85,3 @@ class GuestController extends Controller
         }
     }
 }
- -->
-=======
-
-class ProductController extends Controller
-{
-    public function index()
-    {
-      return view('customer.index');
-    }
-}
-
