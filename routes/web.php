@@ -30,4 +30,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete/{id}', 'GuestController@destroy')->name('delete');
         Route::get('edit/{id}', 'GuestController@edit')->name('edit');
     });
+    Route::prefix('report')->name('report.')->group(function () {
+        Route::get('/', 'ReportController@index')->name('index');
+        Route::get('data', 'ReportController@getData')->name('data');
+    });
 });
