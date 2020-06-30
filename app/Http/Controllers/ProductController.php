@@ -1,8 +1,9 @@
-<!-- <?php
+
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
 
@@ -86,3 +87,13 @@ class GuestController extends Controller
     }
 }
  -->
+=======
+
+class ProductController extends Controller
+{
+    public function index()
+    {
+      return view('customer.index');
+    }
+}
+

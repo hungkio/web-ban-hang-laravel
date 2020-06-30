@@ -19,6 +19,7 @@ Route::post('/', [ 'as' => 'login', 'uses' => 'Auth\LoginController@postLogin'])
 
 
 Route::group(['middleware' => ['auth']], function () {
+
     // Route::prefix('product')->name('product.')->group(function () {
     //     Route::get('/', 'ProductController@index')->name('index');
     //     Route::get('create', 'ProductController@create')->name('create');
@@ -27,6 +28,8 @@ Route::group(['middleware' => ['auth']], function () {
     //     Route::get('delete/{id}', 'ProductController@destroy')->name('delete');
     //     Route::get('edit/{id}', 'ProductController@edit')->name('edit');
     // });
+    });
+
     Route::prefix('guest')->name('guest.')->group(function () {
         Route::get('/', 'GuestController@index')->name('index');
         Route::get('create', 'GuestController@create')->name('create');
@@ -35,6 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete/{id}', 'GuestController@destroy')->name('delete');
         Route::get('edit/{id}', 'GuestController@edit')->name('edit');
     });
+
     Route::prefix('ranks')->name('rank.')->group(function () {
         Route::get('/', 'RankController@index')->name('index');
         Route::get('create', 'RankController@create')->name('create');
@@ -43,4 +47,5 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete/{id}', 'RankController@destroy')->name('delete');
         Route::get('edit/{id}', 'RankController@edit')->name('edit');
     });
+
 });

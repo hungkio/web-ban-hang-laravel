@@ -11,4 +11,5 @@ class Rank extends Model
   	protected $fillable = [
     'rank_name',  'bill_count',  'total_bills'
   	];
+
 }
