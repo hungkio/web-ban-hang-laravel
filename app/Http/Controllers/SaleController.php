@@ -3,28 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests\ProductRequest;
-use App\Repositories\ProductRepository;
-
-class GuestController extends Controller
+use App\Http\Requests\SaleRequest;
+use App\Repositories\SaleRepository;
+class SaleController extends Controller
 {
-    protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+   protected $saleRepository;
+    public function __construct(SaleRepository $saleRepository)
     {
-        $this->productReporsitory = $productReporsitory;
+        $this->saleRepository = $saleRepository;
     }
     public function edit($id)
     {
-        $rank = $this->productReporsitory->find($id);
-        return view('rank.edit', compact('rank'));
+        $sale = $this->saleRepository->find($id);
+        return view('sale.edit', compact('sale'));
     }
-    public function store(ProductRequest $request)
+    public function store(SaleRequest $request)
     {
         try {
-            $data = array_merge(['' => '1'], $request->all());
-            $this->productReporsitory->create($data);
-            return redirect()->route('rank.index')
+            
+            $this->saleRepository->create($request->all());
+            return redirect()->route('sale.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
@@ -37,8 +35,8 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->productReporsitory->getAll();
-        return view('rank.index', compact('ranks'));
+        $sales = $this->saleRepository->getAll();
+        return view('sale.index', compact('sales'));
     }
 
     /**
@@ -48,7 +46,7 @@ class GuestController extends Controller
      */
     public function create()
     {
-        return view('rank.create');
+        return view('sale.create');
     }
 
     /**
@@ -58,11 +56,11 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(SaleRequest $request, $id)
     {
         try {
-            $this->productReporsitory->update($id, $request->only('rank_name', 'bill_count', 'total_bills'));
-            return redirect()->route('rank.index')
+            $this->saleRepository->update($id, $request->only('sale_product_type', 'sale_product_name', 'created_date', 'updated_date', 'sale_rank'));
+            return redirect()->route('sale.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
@@ -78,22 +76,10 @@ class GuestController extends Controller
     public function destroy($id)
     {
         try {
-            $this->productReporsitory->delete($id);
-            return redirect()->route('rank.index')
+            $this->saleRepository->delete($id);
+            return redirect()->route('sale.index')
             ->with('success', 'Deleted Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
-    }
-}
- -->
-=======
-
-class ProductController extends Controller
-{
-    public function index()
-    {
-      return view('customer.index');
-    }
-}
-
+    }}
