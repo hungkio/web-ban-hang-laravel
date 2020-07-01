@@ -29,6 +29,10 @@ Route::group(['middleware' => ['auth']], function () {
     //     Route::get('edit/{id}', 'ProductController@edit')->name('edit');
     // });
 
+
+    });
+
+
     Route::prefix('guest')->name('guest.')->group(function () {
         Route::get('/', 'GuestController@index')->name('index');
         Route::get('create', 'GuestController@create')->name('create');
@@ -47,6 +51,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('edit/{id}', 'RankController@edit')->name('edit');
     });
 
+
     Route::prefix('sale')->name('sale.')->group(function () {
         Route::get('/', 'SaleController@index')->name('index');
         Route::get('create', 'SaleController@create')->name('create');
@@ -60,5 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'ReportController@index')->name('index');
         Route::get('data', 'ReportController@getData')->name('data');
     });
+
+
 
 });
