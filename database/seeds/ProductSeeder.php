@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Http;
+use App\Product;
 class ProductSeeder extends Seeder
 {
     /**
@@ -93,10 +94,10 @@ class ProductSeeder extends Seeder
            $data = [
                'product_name' =>$product_name[$i],
                'product_counts'=>rand(1,20),
-               'products_type'=>'Watch',
+              'products_type'=> Product::CATEGORY[2],
                'product_in_prices' => rand(100,1000),
                'product_out_prices'=> rand(200,2000),
-               'product_image'=>$product_image[$i],
+               'image'=>$product_image[$i],
            ];
            \App\Product::create($data);
        }
@@ -105,10 +106,10 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name2[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=>'LAPTOP',
+                'products_type'=> Product::CATEGORY[3],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
-                'product_image'=>$product_image2[$i],
+                'image'=>$product_image2[$i],
             ];
             \App\Product::create($data);
         }
@@ -117,10 +118,10 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name3[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=>'Phụ kiện',
+                'products_type'=> Product::CATEGORY[5],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
-                'product_image'=>$product_image3[$i],
+                'image'=>$product_image3[$i],
             ];
             \App\Product::create($data);
         }
@@ -129,10 +130,10 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name4[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=>'Điện thoại',
+                'products_type'=> Product::CATEGORY[1],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
-                'product_image'=>$product_image4[$i],
+                'image'=>$product_image4[$i],
             ];
             \App\Product::create($data);
         }
@@ -141,10 +142,10 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name5[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=>'Máy tính bảng',
+                'products_type'=> Product::CATEGORY[4],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
-                'product_image'=>$product_image5[$i],
+                'image'=>$product_image5[$i],
             ];
             \App\Product::create($data);
         }
