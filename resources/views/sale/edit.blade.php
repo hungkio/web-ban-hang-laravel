@@ -62,8 +62,9 @@
             </div>
         </div>
       
-        <button type="submit" class="btn btn-primary btn-block">Save</button>
-        <a href="{{route('sale.index')}}">Back</a>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-left:35%;" >Lưu</button>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-bottom:0px;">   <a href="{{route('sale.index')}}">Quay lại</a></button>
+        
     </form>
 </div>
 @endsection

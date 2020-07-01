@@ -20,10 +20,10 @@
 </div>
 @endif
 </div>
-<button><a href="{{route('sale.create')}}">+Add</a></button>
+<button class="add1"><a href="{{route('sale.create')}}">Thêm</a></button>
 <table class="table display ui celled" id="list_guest">
     <thead>
-        <tr>
+        <tr class="bang1">
             <th scope="col">ID</th>
             <th scope="col">Loạt mặt hàng</th>
             <th scope="col">Tên sản phẩm</th>
@@ -31,9 +31,9 @@
             <th scope="col">Thời gian kết thúc</th>
             <th scope="col">Rank</th>
             <th scope="col">Ngày tạo</th>
-            <th scope="col">Ngày cập nhât</th>
+            <th scope="col">Ngày cập nhật</th>
            <!--  <th scope="col">Bậc Khuyễn Mãi</th>-->
-            <th scope="col">Thao Tác Khác</th>
+            <th scope="col" >Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
@@ -47,7 +47,7 @@
             <td>{{App\Sale::RANK[$row->sale_rank]}}</td>
             <td>{{$row->created_at}}</td>
             <td>{{$row->updated_at}}</td>
-            <td>
+            <td class="chinhsua">
                 <a class="btn btn-success" href="{{route('sale.edit', $row->id)}}">
                     Chỉnh Sửa
                 </a>
@@ -63,3 +63,80 @@
 @section('script')
 <script src="/js/guest/index.js"></script>
 @endsection
+<style>
+
+button.add1 {
+    float: right;
+    margin-top: 10px;
+    border: 1px solid ;
+    margin-right: 63px;
+}
+tr.bang1 th {
+    background-color: #58D3F7;
+    text-align: center;
+}
+.wrapper {
+    margin: 27px;
+}
+div#list_guest_length {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    float: left;
+}
+div#list_guest_filter label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table, th, td {
+ border: 1px solid #ddd !important;
+ }
+ tr:nth-child(even) {
+    background-color: #A9F5F2;
+}
+tr.bang1 {
+    background-color: #58D3F7;
+}
+.btn-success {
+    color: #fff;
+    margin-right: 10px;
+   
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.chinhsua{
+    text-align: center;
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
+   
+   
+    margin-bottom: 30px;
+    color: red;
+
+}
+.add1 a{
+    font-size: 20px;
+    font-weight: 600;
+    color:red;
+}
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
+}
+.add1 a{
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+}
+</style>

@@ -9,11 +9,13 @@
     </button>
 </div>
 @endif
+<h2>Sửa khách hàng</h2>
 <div class="container">
+
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
         @method('put')
         @csrf
-        <h2>Thêm khách hàng</h2>
+   
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
             <div class="col-sm-9">
@@ -76,10 +78,17 @@
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Save</button>
-        <a href="{{route('guest.index')}}">Back</a>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-left:35%;">Lưu</button>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-bottom:5px;"><a href="{{route('guest.index')}}">Quay lại</a></button>
+        
     </form>
 </div>
 @endsection
 @section('script')
 @endsection
+<style>
+    .btn-block+.btn-block {
+    margin-top: 0px !important;
+}
+</style>
+

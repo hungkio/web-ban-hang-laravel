@@ -85,7 +85,7 @@
 
                 <div class="gb-header-bottom_myichi-left">
 
-                    <h1><a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" class="img-responsive"></a></h1>
+                    <h1><a href="/"><img src="{{asset('images/logo2.png')}}" alt="" class="img-responsive"></a></h1>
 
                 </div>
 

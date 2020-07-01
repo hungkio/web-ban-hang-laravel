@@ -24,15 +24,15 @@
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
-            <th scope="col">ID</th>
-            <th scope="col">Tên Khách Hàng</th>
-            <th scope="col">Giới Tính</th>
-            <th scope="col">Tuổi</th>
-            <th scope="col">Số Điện Thoại</th>
-            <th scope="col">Email</th>
-            <th scope="col">Địa Chỉ</th>
-            <th scope="col">Bậc Khuyễn Mãi</th>
-            <th scope="col">Thao Tác Khác</th>
+            <th scope="col" class="so1">ID</th>
+            <th scope="col " class="so2">Tên Khách Hàng</th>
+            <th scope="col" class="so3">Giới Tính</th>
+            <th scope="col" class="so4">Tuổi</th>
+            <th scope="col" class="so5">Số Điện Thoại</th>
+            <th scope="col" class="so6">Email</th>
+            <th scope="col" class="so7">Địa Chỉ</th>
+            <th scope="col" class="so8">Bậc KM</th>
+            <th scope="col" class="so9">Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
@@ -92,6 +92,7 @@ table, th, td {
 }
 tr.bang1 {
     background-color: #58D3F7;
+    height: 70px;
 }
 .btn-success {
     color: #fff;
@@ -106,10 +107,37 @@ tr.bang1 {
 button.add1 {
     height: 32px;
     width: 100px;
+   
+   
+    margin-bottom: 30px;
+    color: red;
+
 }
 .add1 a{
     font-size: 20px;
     font-weight: 600;
-    color:black;
+    color:red;
 }
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+
+th.so3 {
+    width: 7%;
+}
+th.so9 {
+    width: 13%;
+}
+th.so8 {
+    width: 6%;
+}
+.bang1 th {
+    text-align: center;
+    }
 </style>
