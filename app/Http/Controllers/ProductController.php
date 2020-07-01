@@ -8,14 +8,20 @@ use App\Repositories\ProductRepository;
 
 class ProductController extends Controller
 {
-    protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+    protected $productRepository;
+    public function __construct(ProductRepository $productRepository)
     {
-        $this->productReporsitory = $productReporsitory;
+        $this->productRepository = $productRepository;
     }
     public function edit($id)
     {
+
+
+        $productRepository = $this->productRepository->find($id);
+
+
         $products = $this->productReporsitory->find($id);
+
         return view('product.edit', compact('products'));
     }
     public function store(ProductRequest $request)
@@ -29,8 +35,13 @@ class ProductController extends Controller
         //     }
         // }
         try {
+
+            $data = array_merge(['' => '1'], $request->all());
+            $this->productRepository->create($data);
+
             $data = $request->all();
             $this->productReporsitory->create($data);
+
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
@@ -44,7 +55,12 @@ class ProductController extends Controller
      */
     public function index()
     {
+
+
+        $productRepository = $this->productRepository->getAll();
+
         $products = $this->productReporsitory->getAll();
+
         return view('product.index', compact('products'));
     }
 
@@ -74,8 +90,17 @@ class ProductController extends Controller
             $request['image'] = null;
         }
         try {
+
+
+            $this->productRepository->update($id, $request->only('product_name', 'product_counts',
+                                                    'products_type','product_in_prices','product_out_prices'));
+
+            $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
                                                                   'products_type','product_in_prices','product_out_prices', 'image'));
+
+
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
@@ -92,7 +117,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         try {
-            $this->productReporsitory->delete($id);
+            $this->productRepository->delete($id);
             return redirect()->route('product.index')
             ->with('success', 'Deleted Success!');
         } catch (Exception $e) {

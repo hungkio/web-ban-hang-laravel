@@ -15,7 +15,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'APPLE',
+                'sale_product_type'=>'Điện thoại',
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -26,7 +26,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'ASUS',
+                'sale_product_type'=>'Máy tính bảng',
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -37,7 +37,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'LENOVO',
+                'sale_product_type'=>'Phụ kiện',
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -48,7 +48,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'DELL',
+                'sale_product_type'=>'LAPTOP',
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -59,7 +59,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'HP',
+                'sale_product_type'=>'Watch',
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),

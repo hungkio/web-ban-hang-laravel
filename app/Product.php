@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+
+    protected $table = 'products';
+    protected $fillable = [
+        'product_name',  'product_counts',  'products_type',  'product_in_prices',  'product_out_prices','product_image'
+
     const CATEGORY = [
         1 => 'Phụ kiện',
         2 => 'Điện thoại',
@@ -23,5 +28,6 @@ class Product extends Model
     protected $table = 'products';
     protected $fillable = [
         'product_name',  'product_counts',  'products_type',  'product_in_prices',  'product_out_prices', 'image'
+
     ];
 }
