@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Guest;
 use App\User;
+use Carbon\Carbon;
 
 class GuestRepository
 {
@@ -26,6 +27,12 @@ class GuestRepository
     public function delete($id)
     {
         return Guest::findOrFail($id)->delete();
+    }
+    public function getGuestConditon($request)
+    {
+        return Guest::where('created_at', '>=', Carbon::parse($request['start_date']))
+        ->where('created_at', '<=', Carbon::parse($request['end_date']))
+        ->get();
     }
 }
 

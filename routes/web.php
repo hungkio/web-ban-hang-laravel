@@ -28,7 +28,10 @@ Route::group(['middleware' => ['auth']], function () {
     //     Route::get('delete/{id}', 'ProductController@destroy')->name('delete');
     //     Route::get('edit/{id}', 'ProductController@edit')->name('edit');
     // });
+
+
     });
+
 
     Route::prefix('guest')->name('guest.')->group(function () {
         Route::get('/', 'GuestController@index')->name('index');
@@ -47,5 +50,22 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete/{id}', 'RankController@destroy')->name('delete');
         Route::get('edit/{id}', 'RankController@edit')->name('edit');
     });
+
+
+    Route::prefix('sale')->name('sale.')->group(function () {
+        Route::get('/', 'SaleController@index')->name('index');
+        Route::get('create', 'SaleController@create')->name('create');
+        Route::post('store', 'SaleController@store')->name('store');
+        Route::put('update/{id}', 'SaleController@update')->name('update');
+        Route::get('delete/{id}', 'SaleController@destroy')->name('delete');
+        Route::get('edit/{id}', 'SaleController@edit')->name('edit');
+    });
+
+    Route::prefix('report')->name('report.')->group(function () {
+        Route::get('/', 'ReportController@index')->name('index');
+        Route::get('data', 'ReportController@getData')->name('data');
+    });
+
+
 
 });
