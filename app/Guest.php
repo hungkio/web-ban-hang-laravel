@@ -17,13 +17,13 @@ class Guest extends Model
     ];
 
     const RANK_CODE = [
-        'diamon' => 3,
+        'diamond' => 3,
         'gold' => 2,
         'silver' => 1,
     ];
 
     const RANK = [
-        3 => 'diamon',
+        3 => 'diamond',
         2 => 'gold',
         1 => 'silver',
     ];
