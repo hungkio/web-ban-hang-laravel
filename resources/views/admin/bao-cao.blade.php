@@ -2,11 +2,13 @@
 @section('title','User Management')
 @section('content')
 
+<div class="container">
+
 <div class="row">
-    <div class="col-lg-6 offset-md-6 mb-2 col-md-6 col-sm-8">
+    <div class="col-lg-12 offset-md-12 mb-2 col-md-6 col-sm-8">
         <form action="" id="time_form">
             @csrf
-            <label for="">Chọn thời gian báo cáo</label>
+            <label class="baocao1" for="">Chọn thời gian báo cáo</label>
             <div>
                 <label for="">Từ: </label>
                 <input type="month" name="start_date" max="3000-12" id="start_date">
@@ -135,6 +137,7 @@
         </div>
     </div>
 </div>
+</div>
 @endsection
 @section('script')
 <script src="/js/report/index.js"></script>
@@ -144,3 +147,11 @@
 
 </script>
 @endsection
+<style>
+    label.baocao1 {
+        font-size: 30px;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+</style>
