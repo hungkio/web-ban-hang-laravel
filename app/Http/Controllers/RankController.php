@@ -16,7 +16,7 @@ class GuestController extends Controller
     public function edit($id)
     {
         $rank = $this->rankReporsitory->find($id);
-        return view('rank.edit', compact('rank'));
+        return view('rank.edit', compact('ranks'));
     }
     public function store(RankRequest $request)
     {
