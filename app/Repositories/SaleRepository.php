@@ -2,30 +2,33 @@
 
 namespace App\Repositories;
 
-use App\Product;
+use App\Sale;
+use Carbon\Carbon;
 
-
-class ProductRepository
+class SaleRepository
 {
     public function find($id)
     {
-        return Product::findOrFail($id);
+        return Sale::findOrFail($id);
     }
     public function getAll()
     {
-        return Product::all();
+        return Sale::all();
     }
     public function create($data)
     {
-        return Product::create($data);
+        return Sale::create($data);
     }
     public function update($id, $data)
     {
-        return Product::whereId($id)->update($data);
+        return Sale::whereId($id)->update($data);
     }
     public function delete($id)
     {
-        return Product::findOrFail($id)->delete();
+        return Sale::findOrFail($id)->delete();
     }
+
+    
+    
 }
 

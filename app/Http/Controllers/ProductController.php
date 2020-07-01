@@ -17,14 +17,14 @@ class GuestController extends Controller
     public function edit($id)
     {
         $rank = $this->productReporsitory->find($id);
-        return view('rank.edit', compact('rank'));
+        return view('product.edit', compact('products'));
     }
     public function store(ProductRequest $request)
     {
         try {
             $data = array_merge(['' => '1'], $request->all());
             $this->productReporsitory->create($data);
-            return redirect()->route('rank.index')
+            return redirect()->route('product.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
@@ -38,7 +38,7 @@ class GuestController extends Controller
     public function index()
     {
         $rank = $this->productReporsitory->getAll();
-        return view('rank.index', compact('ranks'));
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -48,7 +48,7 @@ class GuestController extends Controller
      */
     public function create()
     {
-        return view('rank.create');
+        return view('product.create');
     }
 
     /**
@@ -61,8 +61,9 @@ class GuestController extends Controller
     public function update(ProductRequest $request, $id)
     {
         try {
-            $this->productReporsitory->update($id, $request->only('rank_name', 'bill_count', 'total_bills'));
-            return redirect()->route('rank.index')
+            $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+                                                    'products_type','product_in_prices','product_out_prices'));
+            return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
@@ -79,21 +80,11 @@ class GuestController extends Controller
     {
         try {
             $this->productReporsitory->delete($id);
-            return redirect()->route('rank.index')
+            return redirect()->route('product.index')
             ->with('success', 'Deleted Success!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
-    }
-}
- -->
-=======
-
-class ProductController extends Controller
-{
-    public function index()
-    {
-      return view('customer.index');
     }
 }
 
