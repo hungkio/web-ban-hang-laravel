@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 <body>
+<div class="dangnhap">
     <div class="wrapper">
         <div class="content-wrapper pb-5">
             <section class="content">
@@ -15,8 +16,15 @@
                         <form method="post" class="formLogin" id="formLogin">
                             @csrf
                             <input type="hidden" name="action" value="loginAdmin">
+                            <div>
+                            <img src="images/Login.png" alt="Chuyên đề 2" class="logoLogin" /> 
+
+                            </div>
+                            <DIV>
                             <h2>Đăng nhập</h2>
-                            <!-- <img src="image/logo11.png" alt="GoldBridge" class="logoLogin" />  -->
+                            </DIV>
+                           
+
                             <div class="boxForm">
                                 <!-- <img src="image/userLogin.jpg" class="iconLogin" /> -->
                                 <input type="text" placeholder="Tên tài khoản..." class="txtLogin" name="username" required/>
@@ -43,6 +51,8 @@
             </section>
         </div>
     </div>
+</div>
+    
 </body>
 </html>
 

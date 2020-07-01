@@ -20,37 +20,37 @@
 </div>
 @endif
 </div>
-<button class="add1"><a href="{{route('guest.create')}}">Thêm</a></button>
+<button class="add1"><a href="{{route('product.create')}}">Thêm</a></button>
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
             <th scope="col">ID</th>
-            <th scope="col">Tên Khách Hàng</th>
-            <th scope="col">Giới Tính</th>
-            <th scope="col">Tuổi</th>
-            <th scope="col">Số Điện Thoại</th>
-            <th scope="col">Email</th>
-            <th scope="col">Địa Chỉ</th>
-            <th scope="col">Bậc Khuyễn Mãi</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Loại sản phẩm</th>
+            <th scope="col">Giá nhập</th>
+            <th scope="col">Giá bán</th>
+            <th scope="col">Ảnh</th>
             <th scope="col">Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($guests as $row)
+        @foreach($products as $row)
         <tr>
             <td>{{$row->id}}</td>
-            <td>{{$row->name}}</td>
-            <td>{{App\Guest::GENDER[$row->sex]}}</td>
-            <td>{{$row->age}}</td>
-            <td>{{$row->phonenumber}}</td>
-            <td>{{$row->email}}</td>
-            <td>{{$row->address}}</td>
-            <td>{{App\Guest::RANK[$row->sale_rank]}}</td>
+            <td>{{$row->product_name}}</td>
+            <td>{{$row->product_counts}}</td>
+            <td>{{\App\Product::CATEGORY[$row->products_type]}}</td>
+            <td>{{$row->product_in_prices}}</td>
+            <td>{{$row->product_out_prices}}</td>
+            <td>
+                <img class="img-circle elevation-2 avatar-size" id="preview" src="{{$row->image ? asset($row->image) : '/images/default-user-icon.png'}}">
+            </td>
             <td class="chinhsua">
-                <a class="btn btn-success" href="{{route('guest.edit', $row->id)}}">
+                <a class="btn btn-success" href="{{route('product.edit', $row->id)}}">
                     Chỉnh Sửa
                 </a>
-                <a class="btn btn-danger" href="{{route('guest.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
+                <a class="btn btn-danger" href="{{route('product.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
                     Xóa
                 </a>
             </td>
@@ -96,7 +96,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-   
+
     background-color: #5cb85c;
     border-color: #4cae4c;
 }

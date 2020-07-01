@@ -13,7 +13,7 @@
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
         @method('put')
         @csrf
-        <h2>Thêm khách hàng</h2>
+        <h2>Sửa Thông Tin khách hàng</h2>
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
             <div class="col-sm-9">

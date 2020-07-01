@@ -20,6 +20,14 @@ class ProductController extends Controller
     }
     public function store(ProductRequest $request)
     {
+        // if ($request->image) {
+        //     $request->image->storeAs('public/images', 'avatar' . $id . '.png');
+        //     $request['avatar_url'] = ('images/avatar' . $id . '.png');
+        // } else {
+        //     if ($request->image_default) {
+        //         $request['avatar_url'] = null;
+        //     }
+        // }
         try {
             $data = $request->all();
             $this->productReporsitory->create($data);
@@ -59,9 +67,15 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
-                                                                  'products_type','product_in_prices','product_out_prices'));
+                                                                  'products_type','product_in_prices','product_out_prices', 'image'));
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {

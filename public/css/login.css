@@ -12,12 +12,12 @@ body{
 ul{
 	padding:0;
 }
-h1, h2, h3, h4, h5, h6, i, img, a, p, ul, li{
-	float:left;
-	list-style-type:none;
-	text-decoration:none;
-}
 
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+}
 .formLogin{
 	width:500px;
 	height:390px;
@@ -38,14 +38,16 @@ h1, h2, h3, h4, h5, h6, i, img, a, p, ul, li{
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.logoLogin{
-	width:70%;
-	margin:10px 15% 30px 15%;
+img.logoLogin {
+    width: 136px;
+    height: 100px;
+    margin-left: 31%;
+    margin-top: -80px;
 }
 .boxForm{
 	float:left;
 	width:100%;
-    border: 1px solid #ACACAC;
+   
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -79,25 +81,19 @@ h1, h2, h3, h4, h5, h6, i, img, a, p, ul, li{
 }
 .txtLogin{
 	float:left;
-	width:90%;
+	width:100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 	padding:9px 10px;
-	border:none;
+	
 	outline:none;
-    border-top-right-radius: 5px;
-    -moz-border-top-right: 5px;
-    -ms-border-top-right-radius: 5px;
-    -o-border-top-right-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    -moz-border-bottom-right: 5px;
-    -ms-border-bottom-right-radius: 5px;
-    -o-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
+    border:2px solid #FACC2E;
+    
+    border-radius: 10px;
+    
 }
 .rowForm{
 	float:left;
