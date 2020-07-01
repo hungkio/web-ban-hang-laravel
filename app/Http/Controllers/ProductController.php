@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
 
@@ -16,14 +15,30 @@ class ProductController extends Controller
     }
     public function edit($id)
     {
-        $productRepository = $this->productRepository->find($id);
+
+
+        $products = $this->productReporsitory->find($id);
+
         return view('product.edit', compact('products'));
     }
     public function store(ProductRequest $request)
     {
+        // if ($request->image) {
+        //     $request->image->storeAs('public/images', 'avatar' . $id . '.png');
+        //     $request['avatar_url'] = ('images/avatar' . $id . '.png');
+        // } else {
+        //     if ($request->image_default) {
+        //         $request['avatar_url'] = null;
+        //     }
+        // }
         try {
+
             $data = array_merge(['' => '1'], $request->all());
             $this->productRepository->create($data);
+
+            $data = $request->all();
+            $this->productReporsitory->create($data);
+
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
@@ -37,7 +52,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $productRepository = $this->productRepository->getAll();
+
+    
+
+        $products = $this->productReporsitory->getAll();
+
         return view('product.index', compact('products'));
     }
 
@@ -60,9 +79,17 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
-            $this->productRepository->update($id, $request->only('product_name', 'product_counts',
-                                                    'products_type','product_in_prices','product_out_prices'));
+
+            $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+                                                                  'products_type','product_in_prices','product_out_prices', 'image'));
+
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {

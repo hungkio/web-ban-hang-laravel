@@ -60,4 +60,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'ReportController@index')->name('index');
         Route::get('data', 'ReportController@getData')->name('data');
     });
+    Route::prefix('bill')->name('bill.')->group(function () {
+        Route::get('/', 'BillController@create')->name('create');
+        Route::post('store', 'BillController@store')->name('store');
+        Route::get('data', 'BillController@getData')->name('data');
+    });
 });

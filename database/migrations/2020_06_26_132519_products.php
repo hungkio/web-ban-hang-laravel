@@ -20,7 +20,11 @@ class Products extends Migration
             $table->string('products_type');
             $table->integer('product_in_prices');
             $table->integer('product_out_prices');
+
             $table->string('product_image');
+
+            $table->longText('image')->nullable();
+
             $table->timestamps();
          });
     }
