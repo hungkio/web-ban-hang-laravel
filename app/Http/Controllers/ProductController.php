@@ -16,7 +16,9 @@ class ProductController extends Controller
     public function edit($id)
     {
 
+
         $productRepository = $this->productRepository->find($id);
+
 
         $products = $this->productReporsitory->find($id);
 
@@ -54,6 +56,7 @@ class ProductController extends Controller
     public function index()
     {
 
+
         $productRepository = $this->productRepository->getAll();
 
         $products = $this->productReporsitory->getAll();
@@ -88,10 +91,15 @@ class ProductController extends Controller
         }
         try {
 
+
             $this->productRepository->update($id, $request->only('product_name', 'product_counts',
                                                     'products_type','product_in_prices','product_out_prices'));
 
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+
+            $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+                                                                  'products_type','product_in_prices','product_out_prices', 'image'));
+
 
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');

@@ -28,6 +28,12 @@ class ProductRequest extends FormRequest
             'product_counts' => 'required|numeric',
             'products_type' => 'required',
 
+
+            'product_in_prices' => 'required',
+            'product_out_prices' => 'required',
+            'product_image' => 'required',
+
+
             'product_in_prices' => 'required',
             'product_out_prices' => 'required',
             'product_image' => 'required',
