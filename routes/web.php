@@ -51,5 +51,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'ReportController@index')->name('index');
         Route::get('data', 'ReportController@getData')->name('data');
     });
+    Route::prefix('customer')->name('customer.')->group(function () {
+        Route::get('/', 'CustomerController@index')->name('index');
+        Route::get('data', 'CustomerController@getData')->name('data');
+    });
 
 });
