@@ -13,7 +13,7 @@
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('sale.update', $sale->id)}}">
         @method('put')
         @csrf
-        <h2>Sửa chương trình khuyến mãi</h2>
+        <h2>Sửa thông tin khuyến mãi</h2>
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Loại sản Phẩm</label>
             <div class="col-sm-9">
@@ -50,7 +50,7 @@
                 @enderror
             </div>
         </div>
-        
+
          <div class="form-group">
             <label for="lastName" class="col-sm-3 control-label">Rank</label>
             <div class="col-sm-9" style="width: 24%;">
@@ -61,11 +61,13 @@
                 </select>
             </div>
         </div>
+
       
         <button type="submit" class="btn btn-primary btn-block" style="margin-left:35%;" >Lưu</button>
         <button type="submit" class="btn btn-primary btn-block" style="margin-bottom:0px;">   <a href="{{route('sale.index')}}">Quay lại</a></button>
         
-    </form>
+
+
 </div>
 @endsection
 @section('script')

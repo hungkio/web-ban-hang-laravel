@@ -25,10 +25,22 @@ class ProductRequest extends FormRequest
     {
         return [
             'product_name' => 'required',
-            'product_counts' => 'required',
+            'product_counts' => 'required|numeric',
             'products_type' => 'required',
+
+
             'product_in_prices' => 'required',
             'product_out_prices' => 'required',
+            'product_image' => 'required',
+
+
+            'product_in_prices' => 'required',
+            'product_out_prices' => 'required',
+            'product_image' => 'required',
+
+            'product_in_prices' => 'required|numeric',
+            'product_out_prices' => 'required|numeric',
+
         ];
     }
 }
