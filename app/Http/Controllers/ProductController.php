@@ -7,23 +7,23 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
 
-class GuestController extends Controller
+class ProductController extends Controller
 {
-    protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+    protected $productRepository;
+    public function __construct(ProductRepository $productRepository)
     {
-        $this->productReporsitory = $productReporsitory;
+        $this->productRepository = $productRepository;
     }
     public function edit($id)
     {
-        $rank = $this->productReporsitory->find($id);
+        $productRepository = $this->productRepository->find($id);
         return view('product.edit', compact('products'));
     }
     public function store(ProductRequest $request)
     {
         try {
             $data = array_merge(['' => '1'], $request->all());
-            $this->productReporsitory->create($data);
+            $this->productRepository->create($data);
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
         } catch (Exception $e) {
@@ -37,7 +37,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->productReporsitory->getAll();
+        $productRepository = $this->productRepository->getAll();
         return view('product.index', compact('products'));
     }
 
@@ -61,7 +61,7 @@ class GuestController extends Controller
     public function update(ProductRequest $request, $id)
     {
         try {
-            $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
+            $this->productRepository->update($id, $request->only('product_name', 'product_counts',
                                                     'products_type','product_in_prices','product_out_prices'));
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
@@ -79,7 +79,7 @@ class GuestController extends Controller
     public function destroy($id)
     {
         try {
-            $this->productReporsitory->delete($id);
+            $this->productRepository->delete($id);
             return redirect()->route('product.index')
             ->with('success', 'Deleted Success!');
         } catch (Exception $e) {
