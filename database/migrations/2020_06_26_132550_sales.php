@@ -19,7 +19,6 @@ class Sales extends Migration
             $table->integer('sale_percent');
             $table->date('sale_begin');
             $table->date('sale_end');
-            $table->string('sale_rank');
             $table->timestamps();
         });
     }
