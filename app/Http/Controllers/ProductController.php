@@ -113,8 +113,9 @@ class ProductController extends Controller
         $watchs = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Đồng hồ']);
         $sales = $this->saleRepository->getAll();
         $sales1 = $this->saleRepository->last();
+        $saleslimit = $this->saleRepository->limit();
         return view('customer.index', compact(
-            'phones', 'accessorys', 'laptops', 'tablets', 'watchs','sales1'
+            'phones', 'accessorys', 'laptops', 'tablets', 'watchs','sales1','saleslimit'
         ));
     }
      public function detail($id)

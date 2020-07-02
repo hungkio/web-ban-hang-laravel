@@ -23,6 +23,10 @@ class SaleRepository
     {
         return Sale::whereId($id)->update($data);
     }
+    public function limit()
+    {
+        return Sale::orderBy('id', 'desc')->take(5)->get();
+    }
     public function delete($id)
     {
         return Sale::findOrFail($id)->delete();
