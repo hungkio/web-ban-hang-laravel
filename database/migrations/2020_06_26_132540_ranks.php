@@ -18,6 +18,7 @@ class Ranks extends Migration
             $table->string('rank_name');
             $table->integer('bill_count');
             $table->integer('total_bills');
+            $table->integer('sale_percent'),
             $table->timestamps();
         });
     }
