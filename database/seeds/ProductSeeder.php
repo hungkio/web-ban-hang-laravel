@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Http;
 use App\Product;
-class ProductSeeder extends Seeder
+class   ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,12 +13,12 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $product_name = [
-            'apple-watch-s3-gps-42mm-vien-nhom-day-cao-su-den',
-            'apple-watch-s3-lte-38mm-vien-nhom-day-cao-su-thum',
-            'apple-watch-s3-lte-42mm-vien-nhom-day-cao-su-thum',
-            'apple-watch-s5-40mm-vien-nhom-day-cao-su',
-            'apple-watch-s5-lte-44mm-vien-nhom-day-cao-su-den',
-            'apple-watch-s5-lte-day-thep-thum'];
+            'Apple watch s3 gps 42mm viền nhôm dây cao su đen',
+            'Apple watch s3 lte 38mm viền nhôm dây cao su',
+            'Apple watch s3 lte 42mm viền nhôm dây cao su',
+            'Apple watch s5 40mm viền nhôm dây cao su',
+            'Apple watch s5 lte 44mm viền nhôm dây cao su đen',
+            'Apple watch s5 lte dây thép'];
         $product_image = ['storage/images/apple-watch-s3-gps-42mm-vien-nhom-day-cao-su-den-163720-023733-600x600.png',
             'storage/images/apple-watch-s3-lte-38mm-vien-nhom-day-cao-su-thum-600x600.jpg',
             'storage/images/apple-watch-s3-lte-42mm-vien-nhom-day-cao-su-thum-600x600.jpg',
@@ -26,12 +26,12 @@ class ProductSeeder extends Seeder
             'storage/images/apple-watch-s5-lte-44mm-vien-nhom-day-cao-su-den-ava-600x600.jpg',
             'storage/images/apple-watch-s5-lte-day-thep-thum-600x600.jpg'];
         $product_name2 = [
-            'LAPTOP_acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb',
-            'LAPTOP_acer-swift-sf315-52-38yq-i3-8130u-4gb-1tb-156f',
-            'LAPTOP_apple-macbook-air-2020-gold',
-            'LAPTOP_hp-15s-du0063tu-i5-8265u-4gb-1tb-win10-6zf63pa-20405',
-            'LAPTOP_laptop-lenovo-s340-81n70064vn',
-            'LAPTOP_lenovo-ideapad-3-14iil05-i7-81wd0040vn',
+            'Acer Aspire a515 53 5112 i5 8265u 14gb 16gb 1tb',
+            'Acer Swift sf315 52 38yq i3 8130u 4gb 1tb',
+            'Apple Macbook Air 2020 gold',
+            'Hp 15s du0063tu i5 8265u 4gb 1tb win10 6zf63pa 20405',
+            'Lenovo s340 81n70064vn',
+            'Lenovo Ideapad 3 14iil05 i7 81wd0040vn',
         ];
         $product_image2 = [
             'storage/images/LAPTOP_acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb-win-198790-600x600.png',
@@ -42,12 +42,12 @@ class ProductSeeder extends Seeder
             'storage/images/LAPTOP_lenovo-ideapad-3-14iil05-i7-81wd0040vn-222638-1-600x600.png'
         ];
         $product_name3 = [
-            'loa-bluetooth-fenda-w5',
-            'loa-bluetooth-fenda-w8',
-            'mieng-dan-kinh-full-man-hinh-xs-max-11-pro-max',
-            'tai-nghe-chup-tai-kanen-ip-2090',
-            'tai-nghe-bluetooth-awei-g51bs-den',
-            'sac-dtdd-pin-sac-du-phong-19000mah-xmobile-gram-6s-trang',
+            'Loa bluetooth fenda w5',
+            'Loa bluetooth fenda w8',
+            'Miếng dán kính full màn hình XSMax - 11 Promax',
+            'Tai nghe chụp tai kanen ip 2090',
+            'Tai nghe bluetooth awei g51bs đen',
+            'Sạc dự phòng 19000mah xmobile gram 6s trắng',
         ];
         $product_image3= [
             'storage/images/loa-bluetooth-fenda-w5-avatar-5-600x600.jpg',
@@ -58,12 +58,12 @@ class ProductSeeder extends Seeder
             'storage/images/sac-dtdd-pin-sac-du-phong-19000mah-xmobile-gram-6s-trang-600x600.jpg'
         ];
         $product_name4 = [
-            'PHONE_iphone-11-red',
-            'PHONE_oppo-a92-white',
-            'PHONE_realme-6i-trang',
-            'PHONE_samsung-galaxy-a31',
-            'PHONE_samsung-galaxy-a51-8gb-blue',
-            'PHONE_xiaomi-redmi-9',
+            'Iphone 11 Red',
+            'Oppo a92 White',
+            'Realme 6i White',
+            'Samsung Galaxy a31',
+            'Samsung Galaxy a51 8gb blue',
+            'Xiaomi Redmi 9',
         ];
         $product_image4 = [
             'storage/images/PHONE_iphone-11-red-2-400x460-400x460.png',
@@ -74,12 +74,12 @@ class ProductSeeder extends Seeder
             'storage/images/PHONE_xiaomi-redmi-9-114620-094649-400x460.png'
         ];
         $product_name5 = [
-            'TABLET_huawei-mediapad-t5-16gb',
-            'TABLET_huawei-mediapad-t5-33397',
-            'TABLET_ipad-10-2-inch-wifi-32gb-2019-gold',
-            'TABLET_ipipad-10-2-inch-wifi-128gb-2019-silver',
-            'TABLET_samsung-galaxy-tab-a8-plus-p205-black',
-            'TABLET_samsung-galaxy-tab-a8-t295-2019-silver',
+            'Huawei Mediapad t5 16gb',
+            'Huawei Mediapad t5 33397',
+            'IPad 10.2 Inch Wifi 32gb 2019 gold',
+            'IPad 10.2 Inch Wifi 128gb 2019 silver',
+            'Samsung Galaxy Tab a8 plus black',
+            'Samsung Galaxy Tab a8 2019 silver',
         ];
         $product_image5 = [
             'storage/images/TABLET_huawei-mediapad-t5-16gb-400x460-2-400x460.png',
