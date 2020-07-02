@@ -59,7 +59,7 @@ class SaleController extends Controller
     public function update(SaleRequest $request, $id)
     {
         try {
-            $this->saleRepository->update($id, $request->only('sale_product_type', 'sale_product_name', 'created_date', 'updated_date', 'sale_rank'));
+            $this->saleRepository->update($id, $request->only('sale_product_type','sale_percent', 'created_date', 'updated_date', 'sale_rank'));
             return redirect()->route('sale.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {

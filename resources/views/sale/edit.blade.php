@@ -28,10 +28,10 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="email" class="col-sm-3 control-label">Tên Sản Phẩm</label>
+                <label for="email" class="col-sm-3 control-label">Phẩn trăm</label>
                 <div class="col-sm-9">
-                    <input id="sale_product_name" class="form-control error-border" name="sale_product_name" type="text" value="{{$sale->sale_product_name}}">
-                    @error('sale_product_name')
+                    <input id="sale_percent" class="form-control error-border" name="sale_percent" type="number" value="{{$sale->sale_percent}}">
+                    @error('sale_percent')
                     <span class=" col-6 error-val">{{ $message  }}</span>
                     @enderror
                 </div>
