@@ -61,17 +61,13 @@
                 </select>
             </div>
         </div>
-<<<<<<< HEAD
+
       
         <button type="submit" class="btn btn-primary btn-block" style="margin-left:35%;" >Lưu</button>
         <button type="submit" class="btn btn-primary btn-block" style="margin-bottom:0px;">   <a href="{{route('sale.index')}}">Quay lại</a></button>
         
-=======
 
-        <button type="submit" class="btn btn-primary btn-block">Save</button>
-        <a href="{{route('sale.index')}}">Back</a>
->>>>>>> cb4c09de346acaea1ed2b7b045e763aa8f822193
-    </form>
+
 </div>
 @endsection
 @section('script')

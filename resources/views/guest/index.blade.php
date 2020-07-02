@@ -24,15 +24,15 @@
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
-            <th scope="col" class="so1">ID</th>
-            <th scope="col " class="so2">Tên Khách Hàng</th>
-            <th scope="col" class="so3">Giới Tính</th>
-            <th scope="col" class="so4">Tuổi</th>
-            <th scope="col" class="so5">Số Điện Thoại</th>
-            <th scope="col" class="so6">Email</th>
-            <th scope="col" class="so7">Địa Chỉ</th>
-            <th scope="col" class="so8">Bậc KM</th>
-            <th scope="col" class="so9">Thao Tác Khác</th>
+            <th scope="col"  class="guest1">ID</th>
+            <th scope="col" class="guest2">Tên Khách Hàng</th>
+            <th scope="col" class="guest3">Giới Tính</th>
+            <th scope="col" class="guest4">Tuổi</th>
+            <th scope="col" class="guest5">Số Điện Thoại</th>
+            <th scope="col" class="guest6">Email</th>
+            <th scope="col" class="guest7">Địa Chỉ</th>
+            <th scope="col" class="guest8">Bậc Khuyễn Mãi</th>
+            <th scope="col" class="guest9">Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
@@ -131,13 +131,18 @@ button.add1:hover{
 th.so3 {
     width: 7%;
 }
-th.so9 {
-    width: 13%;
+th.guest9.sorting {
+    width: 14% !important;
 }
-th.so8 {
-    width: 6%;
+th.guest8.sorting {
+    width: 12% !important;
 }
-.bang1 th {
-    text-align: center;
-    }
+th.guest3.sorting {
+    width: 7% !important;
+
+}
+th.guest2.sorting {
+    width: 12% !important;
+}
+
 </style>

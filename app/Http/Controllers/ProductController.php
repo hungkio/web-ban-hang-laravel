@@ -5,13 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
+use App\Repositories\SaleRepository;
+use App\Product;
 
 class ProductController extends Controller
 {
     protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+    public function __construct(
+        ProductRepository $productReporsitory,
+        SaleRepository $saleRepository
+    )
     {
         $this->productReporsitory = $productReporsitory;
+        $this->saleRepository = $saleRepository;
     }
     public function edit($id)
     {
@@ -20,16 +26,15 @@ class ProductController extends Controller
     }
     public function store(ProductRequest $request)
     {
-        // if ($request->image) {
-        //     $request->image->storeAs('public/images', 'avatar' . $id . '.png');
-        //     $request['avatar_url'] = ('images/avatar' . $id . '.png');
-        // } else {
-        //     if ($request->image_default) {
-        //         $request['avatar_url'] = null;
-        //     }
-        // }
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
-            $data = $request->all();
+            $data = $request->only('product_name', 'product_counts',
+                                   'products_type','product_in_prices','product_out_prices', 'image');
             $this->productReporsitory->create($data);
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
@@ -98,6 +103,24 @@ class ProductController extends Controller
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
+    }
+    public function show()
+    {
+        $phones = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Điện thoại']);
+        $accessorys = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Phụ kiện']);
+        $laptops = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Laptop']);
+        $tablets = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Máy tính bảng']);
+        $watchs = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Đồng hồ']);
+        $sales = $this->saleRepository->getAll();
+        $sales1 = $this->saleRepository->last();
+        return view('customer.index', compact(
+            'phones', 'accessorys', 'laptops', 'tablets', 'watchs','sales1'
+        ));
+    }
+     public function detail($id)
+    {
+        $products = $this->productReporsitory->find($id);
+        return view('product.detail', compact('products'));
     }
 }
 

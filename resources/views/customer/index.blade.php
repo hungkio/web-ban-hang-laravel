@@ -1,185 +1,25 @@
 @extends('layout')
 @section('content')
 <div class="gb-content">
-    <!--SLIDE-->
-    <div class="slideslide" >
-
-        <div class="gb-slideshow_myichi gb-slide-mobile">
-
-            <div class="gb-slideshow_myichi-slide owl-carousel owl-theme">
-
-
-
-                <div class="item">
-
-                    <img src="images/be7047161447ce53c1e553c987402ab7.jpg" alt="" class="img-responsive">
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- end slide -->
     <!--CONTENT-->
     <div class="Content-Main_myichi">
         <div class="container">
-
-            <section id="demos">
-                <div class="gb-mathanguachuong_myichi">
-                    <div class="titleCategoryProduct_myichi">
-                        <h4>Sản phẩm mới</h4>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <div class="owl-carousel owl-theme">
-                                <div class="item">
-
-                                    <div class="product_item_myichi">
-                                        <div class="product_item_img_myichi">
-                                            <a href="#">
-                                                <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                            </a>
-                                            <!--SALE-->
-
-                                        </div>
-                                        <div class="product_item_text_myichi">
-                                            <h2><a href="/#">Tên sản phẩm</a></h2>
-                                            <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
-                                                <div class="prices_myichi">
-                                                    <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                    <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                </div>
-                                                <div class="gb-btnmuahang_myichi">
-                                                    <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="item">
-                                    <div class="product_item_myichi">
-                                        <div class="product_item_img_myichi">
-                                            <a href="#">
-                                                <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                            </a>
-                                            <!--SALE-->
-
-                                        </div>
-                                        <div class="product_item_text_myichi">
-                                            <h2><a href="/#">Tên sản phẩm</a></h2>
-                                            <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
-                                                <div class="prices_myichi">
-                                                    <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                    <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                </div>
-                                                <div class="gb-btnmuahang_myichi">
-                                                    <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product_item_myichi">
-                                        <div class="product_item_img_myichi">
-                                            <a href="#">
-                                                <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                            </a>
-                                            <!--SALE-->
-
-                                        </div>
-                                        <div class="product_item_text_myichi">
-                                            <h2><a href="/#">Tên sản phẩm</a></h2>
-                                            <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
-                                                <div class="prices_myichi">
-                                                    <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                    <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                </div>
-                                                <div class="gb-btnmuahang_myichi">
-                                                    <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product_item_myichi">
-                                        <div class="product_item_img_myichi">
-                                            <a href="#">
-                                                <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                            </a>
-                                            <!--SALE-->
-
-                                        </div>
-                                        <div class="product_item_text_myichi">
-                                            <h2><a href="/#">Tên sản phẩm</a></h2>
-                                            <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
-                                                <div class="prices_myichi">
-                                                    <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                    <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                </div>
-                                                <div class="gb-btnmuahang_myichi">
-                                                    <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product_item_myichi">
-                                        <div class="product_item_img_myichi">
-                                            <a href="#">
-                                                <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                            </a>
-                                            <!--SALE-->
-
-                                        </div>
-                                        <div class="product_item_text_myichi">
-                                            <h2><a href="/#">Tên sản phẩm</a></h2>
-                                            <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
-                                                <div class="prices_myichi">
-                                                    <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                    <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                </div>
-                                                <div class="gb-btnmuahang_myichi">
-                                                    <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
             <!--SẢN PHẨM BÁN CHẠY-->
             <div class="row">
                 <div class="col-md-12">
                     <div class="gb-mathanguachuong_myichi">
+                        <marquee style="font-size: 15px;    font-weight: bold;    line-height: 17px;    color: red;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
+                            Chương trình khuyến mãi: Giảm ngay 
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua 
+                            <span  style="font-size: 20px; color: orange">{{$sales1 -> sale_product_type}}</span> cho khách hàng bậc trở lên
+                            <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
+
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
+                        </marquee>
+                           
                         <div class="titleCategoryProduct_myichi">
                             <h4>Sản phẩm bán chạy</h4>
                         </div>
@@ -187,22 +27,21 @@
                         <div class="categoryProduct_myichi">
                             <div class="container">
                                 <div class="row">
+                                    <h3>Điện thoại</h3>
+                                    @foreach($phones as $phone)
                                     <div class="col-md-3 col-sm-3 col-xs-6">
                                         <div class="product_item_myichi">
                                             <div class="product_item_img_myichi">
-                                                <a href="#">
-                                                    <img src="images/aaaa.jpg" alt="" class="img-responsive">
+                                                <a href="{{route('product.detail', $phone->id)}}">
+                                                    <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
                                                 </a>
-                                                <!--SALE-->
-
                                             </div>
                                             <div class="product_item_text_myichi">
-                                                <h2><a href="/#">Tên sản phẩm</a></h2>
+                                                <h2><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
                                                 <div class="product_item_price_chitiet_myichi">
                                                     <!--PRICES-->
                                                     <div class="prices_myichi">
-                                                        <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                        <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
+                                                        <p class="prices-news_myichi">{{$phone->product_out_prices}} vnđ</p>
                                                     </div>
                                                     <div class="gb-btnmuahang_myichi">
                                                         <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
@@ -213,268 +52,145 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-6">
-                                        <div class="product_item_myichi">
-                                            <div class="product_item_img_myichi">
-                                                <a href="#">
-                                                    <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                                </a>
-                                                <!--SALE-->
-
-                                            </div>
-                                            <div class="product_item_text_myichi">
-                                                <h2><a href="/#">Tên sản phẩm</a></h2>
-                                                <div class="product_item_price_chitiet_myichi">
-                                                    <!--PRICES-->
-                                                    <div class="prices_myichi">
-                                                        <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                        <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                    </div>
-                                                    <div class="gb-btnmuahang_myichi">
-                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-6">
-                                        <div class="product_item_myichi">
-                                            <div class="product_item_img_myichi">
-                                                <a href="#">
-                                                    <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                                </a>
-                                                <!--SALE-->
-
-                                            </div>
-                                            <div class="product_item_text_myichi">
-                                                <h2><a href="/#">Tên sản phẩm</a></h2>
-                                                <div class="product_item_price_chitiet_myichi">
-                                                    <!--PRICES-->
-                                                    <div class="prices_myichi">
-                                                        <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                        <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                    </div>
-                                                    <div class="gb-btnmuahang_myichi">
-                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-6">
-                                        <div class="product_item_myichi">
-                                            <div class="product_item_img_myichi">
-                                                <a href="#">
-                                                    <img src="images/aaaa.jpg" alt="" class="img-responsive">
-                                                </a>
-                                                <!--SALE-->
-
-                                            </div>
-                                            <div class="product_item_text_myichi">
-                                                <h2><a href="/#">Tên sản phẩm</a></h2>
-                                                <div class="product_item_price_chitiet_myichi">
-                                                    <!--PRICES-->
-                                                    <div class="prices_myichi">
-                                                        <p class="prices-news_myichi">Giá: 1.000.000 vnđ</p>
-                                                        <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                    </div>
-                                                    <div class="gb-btnmuahang_myichi">
-                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    @endforeach
                                 </div>
                             </div>
-                            <div class="btn-xemchitiet_mychili">
-                                <a href="/san-pham">Xem thêm sản phẩm</a>
+                        </div>
+
+                        <div class="categoryProduct_myichi">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Laptop</h3>
+                                    @foreach($laptops as $laptop)
+                                    <div class="col-md-3 col-sm-3 col-xs-6">
+                                        <div class="product_item_myichi">
+                                            <div class="product_item_img_myichi">
+                                                <a href="#">
+                                                    <img src="{{asset($laptop->image)}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="product_item_text_myichi">
+                                                <h2><a href="/#">{{$laptop->product_name}}</a></h2>
+                                                <div class="product_item_price_chitiet_myichi">
+                                                    <!--PRICES-->
+                                                    <div class="prices_myichi">
+                                                        <p class="prices-news_myichi">{{$laptop->product_out_prices}} vnđ</p>
+                                                    </div>
+                                                    <div class="gb-btnmuahang_myichi">
+                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="categoryProduct_myichi">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Máy tính bảng</h3>
+                                    @foreach($tablets as $tablet)
+                                    <div class="col-md-3 col-sm-3 col-xs-6">
+                                        <div class="product_item_myichi">
+                                            <div class="product_item_img_myichi">
+                                                <a href="#">
+                                                    <img src="{{asset($tablet->image)}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="product_item_text_myichi">
+                                                <h2><a href="/#">{{$tablet->product_name}}</a></h2>
+                                                <div class="product_item_price_chitiet_myichi">
+                                                    <!--PRICES-->
+                                                    <div class="prices_myichi">
+                                                        <p class="prices-news_myichi">{{$tablet->product_out_prices}} vnđ</p>
+                                                    </div>
+                                                    <div class="gb-btnmuahang_myichi">
+                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="categoryProduct_myichi">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Đồng hồ thông minh</h3>
+                                    @foreach($watchs as $watch)
+                                    <div class="col-md-3 col-sm-3 col-xs-6">
+                                        <div class="product_item_myichi">
+                                            <div class="product_item_img_myichi">
+                                                <a href="#">
+                                                    <img src="{{asset($watch->image)}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="product_item_text_myichi">
+                                                <h2><a href="/#">{{$watch->product_name}}</a></h2>
+                                                <div class="product_item_price_chitiet_myichi">
+                                                    <!--PRICES-->
+                                                    <div class="prices_myichi">
+                                                        <p class="prices-news_myichi">{{$watch->product_out_prices}} vnđ</p>
+                                                    </div>
+                                                    <div class="gb-btnmuahang_myichi">
+                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="categoryProduct_myichi">
+                            <div class="container">
+                                <div class="row">
+                                    <h3>Phụ kiện khác</h3>
+                                    @foreach($accessorys as $accessory)
+                                    <div class="col-md-3 col-sm-3 col-xs-6">
+                                        <div class="product_item_myichi">
+                                            <div class="product_item_img_myichi">
+                                                <a href="#">
+                                                    <img src="{{asset($accessory->image)}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="product_item_text_myichi">
+                                                <h2><a href="/#">{{$accessory->product_name}}</a></h2>
+                                                <div class="product_item_price_chitiet_myichi">
+                                                    <!--PRICES-->
+                                                    <div class="prices_myichi">
+                                                        <p class="prices-news_myichi">{{$accessory->product_out_prices}} vnđ</p>
+                                                    </div>
+                                                    <div class="gb-btnmuahang_myichi">
+                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-
-            <div class="gb-videoclip_myichi">
-
-                <div class="container">
-
-                    <div class="titleCategoryProduct_myichi">
-
-                        <h4>Video</h4>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-sm-4">
-
-                            <div class="gb-videoclip_myichi-item">
-
-                                <!-- Trigger the modal with a button -->
-
-                                <div class="gb-videoclip_myichi-item-img">
-
-                                    <img src="images/a11.PNG" alt="" data-toggle="modal" data-target="#myModal">
-
-                                    <h2>Video de mo san pham</h2>
-
-                                </div>
-
-
-
-                                <!-- Modal -->
-
-                                <div id="myModal" class="modal fade" role="dialog">
-
-                                    <div class="modal-dialog">
-
-
-
-                                        <!-- Modal content-->
-
-                                        <div class="modal-content">
-
-                                            <div class="modal-header">
-
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/iAfpZYhsE20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                            </div>
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="gb-videoclip_myichi-item">
-
-                                <!-- Trigger the modal with a button -->
-
-                                <div class="gb-videoclip_myichi-item-img">
-
-                                    <img src="images/a11.PNG" alt="" data-toggle="modal" data-target="#myModal2">
-
-                                    <h2>Video de mo san pham</h2>
-
-                                </div>
-
-
-
-                                <!-- Modal -->
-
-                                <div id="myModal2" class="modal fade" role="dialog">
-
-                                    <div class="modal-dialog">
-
-
-
-                                        <!-- Modal content-->
-
-                                        <div class="modal-content">
-
-                                            <div class="modal-header">
-
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/iAfpZYhsE20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                            </div>
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="gb-videoclip_myichi-item">
-
-                                <!-- Trigger the modal with a button -->
-
-                                <div class="gb-videoclip_myichi-item-img">
-
-                                    <img src="images/a11.PNG" alt="" data-toggle="modal" data-target="#myModal3">
-
-                                    <h2>Video de mo san pham</h2>
-
-                                </div>
-
-
-
-                                <!-- Modal -->
-
-                                <div id="myModal3" class="modal fade" role="dialog">
-
-                                    <div class="modal-dialog">
-
-
-
-                                        <!-- Modal content-->
-
-                                        <div class="modal-content">
-
-                                            <div class="modal-header">
-
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                                            </div>
-
-                                            <div class="modal-body">
-
-                                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/iAfpZYhsE20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                            </div>
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
             <div class="gb-latest-post_myichi">
@@ -530,68 +246,4 @@
 
 @endsection
 @section('script')
-<script>
-
-    $(document).ready(function (){
-
-        var owl = $('.gb-slideshow_myichi-slide');
-
-        owl.owlCarousel({
-
-            loop:true,
-
-            margin:0,
-
-            navSpeed:500,
-
-            nav:true,
-
-            dots:false,
-
-            autoplay: true,
-
-            rewind: true,
-
-            navText:[],
-
-            items:1,
-
-            responsive:{
-
-                0:{
-
-                    nav:false
-
-                },
-
-                600:{
-
-                    nav:true
-
-                }
-
-            }
-
-        });
-    });
-    $(document).ready(function() {
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            margin: 10,
-            nav: true,
-            loop: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    })
-</script>
 @endsection
