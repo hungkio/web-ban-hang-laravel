@@ -85,7 +85,7 @@
 
                 <div class="gb-header-bottom_myichi-left">
 
-                    <h1><a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" class="img-responsive"></a></h1>
+                    <h1><a href="/"><img src="{{asset('images/logo2.png')}}" alt="" class="img-responsive"></a></h1>
 
                 </div>
 
@@ -96,11 +96,11 @@
                             <div class="cssmenu">
                                 <ul>
                                     <li><a href="#">Trang chủ</a></li>
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li class="has-sub"><a href="#">Sản phẩm</a></li>
-                                    <li><a href="#">Đặt hàng nhanh</a></li>
-                                    <li><a href="#">Liên hệ</a></li>
-                                    <li><a href="#">Tin tức</a></li></ul>
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li class="has-sub"><a href="#">Chương trình khuyến mại</a></li>
+                                    <li><a href="#">Báo cáo</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                    <!-- <li><a href="#">Tin tức</a></li></ul> -->
                                 </div>
                             </div>
                         </nav>
