@@ -27,7 +27,7 @@
             <tr class="bang1">
                 <th scope="col">ID</th>
                 <th scope="col">Loạt mặt hàng</th>
-                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Phần trăm</th>
                 <th scope="col">Thời gian bắt đầu</th>
                 <th scope="col">Thời gian kết thúc</th>
                 <th scope="col">Rank</th>
@@ -42,7 +42,7 @@
             <tr>
                 <td>{{$row->id}}</td>
                 <td>{{$row->sale_product_type}}</td>
-                <td>{{$row->sale_product_name}}</td>
+                <td>{{$row->sale_percent}}</td>
                 <td>{{$row->sale_begin}}</td>
                 <td>{{$row->sale_end}}</td>
                 <td>{{App\Sale::RANK[$row->sale_rank]}}</td>
