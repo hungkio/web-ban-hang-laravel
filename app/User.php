@@ -8,6 +8,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
   const DEFAULT_PASSWORD = 'admin';
+
+    const GENDER = [
+        1 => 'male',
+        2 => 'female'
+    ];
+
+    const GENDER_CODE = [
+        'male' => 1,
+        'female' => 2
+    ];
+
   protected $table = 'users';
   protected $fillable = [
     'username',
