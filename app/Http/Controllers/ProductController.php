@@ -5,13 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
+use App\Repositories\SaleRepository;
+use App\Product;
 
 class ProductController extends Controller
 {
     protected $productReporsitory;
-    public function __construct(ProductRepository $productReporsitory)
+    public function __construct(
+        ProductRepository $productReporsitory,
+        SaleRepository $saleRepository
+    )
     {
         $this->productReporsitory = $productReporsitory;
+        $this->saleRepository = $saleRepository;
     }
     public function edit($id)
     {
@@ -100,8 +106,15 @@ class ProductController extends Controller
     }
     public function show()
     {
-        $products = $this->productReporsitory->getAll();
-        return view('product.index', compact('products'));
+        $phones = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Điện thoại']);
+        $accessorys = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Phụ kiện']);
+        $laptops = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Laptop']);
+        $tablets = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Máy tính bảng']);
+        $watchs = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Đồng hồ']);
+        $sales = $this->saleRepository->getAll();
+        return view('customer.index', compact(
+            'phones', 'accessorys', 'laptops', 'tablets', 'watchs'
+        ));
     }
 }
 

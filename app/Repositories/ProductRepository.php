@@ -27,5 +27,9 @@ class ProductRepository
     {
         return Product::findOrFail($id)->delete();
     }
+    public function getProductCategory($category)
+    {
+        return Product::where('products_type', $category)->get();
+    }
 }
 
