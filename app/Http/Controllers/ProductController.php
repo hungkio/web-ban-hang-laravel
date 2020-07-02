@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests\ProductRequest;
 use App\Repositories\ProductRepository;
 
-class GuestController extends Controller
+class ProductController extends Controller
 {
     protected $productReporsitory;
     public function __construct(ProductRepository $productReporsitory)
@@ -16,13 +15,20 @@ class GuestController extends Controller
     }
     public function edit($id)
     {
-        $rank = $this->productReporsitory->find($id);
+        $products = $this->productReporsitory->find($id);
         return view('product.edit', compact('products'));
     }
     public function store(ProductRequest $request)
     {
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
-            $data = array_merge(['' => '1'], $request->all());
+            $data = $request->only('product_name', 'product_counts',
+                                   'products_type','product_in_prices','product_out_prices', 'image');
             $this->productReporsitory->create($data);
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
@@ -37,7 +43,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->productReporsitory->getAll();
+        $products = $this->productReporsitory->getAll();
         return view('product.index', compact('products'));
     }
 
@@ -60,9 +66,15 @@ class GuestController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
-                                                    'products_type','product_in_prices','product_out_prices'));
+                                                                  'products_type','product_in_prices','product_out_prices', 'image'));
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
@@ -85,6 +97,11 @@ class GuestController extends Controller
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
+    }
+    public function show()
+    {
+        $products = $this->productReporsitory->getAll();
+        return view('product.index', compact('products'));
     }
 }
 

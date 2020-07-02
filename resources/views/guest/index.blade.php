@@ -24,15 +24,15 @@
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
-            <th scope="col">ID</th>
-            <th scope="col">Tên Khách Hàng</th>
-            <th scope="col">Giới Tính</th>
-            <th scope="col">Tuổi</th>
-            <th scope="col">Số Điện Thoại</th>
-            <th scope="col">Email</th>
-            <th scope="col">Địa Chỉ</th>
-            <th scope="col">Bậc Khuyễn Mãi</th>
-            <th scope="col">Thao Tác Khác</th>
+            <th scope="col"  class="guest1">ID</th>
+            <th scope="col" class="guest2">Tên Khách Hàng</th>
+            <th scope="col" class="guest3">Giới Tính</th>
+            <th scope="col" class="guest4">Tuổi</th>
+            <th scope="col" class="guest5">Số Điện Thoại</th>
+            <th scope="col" class="guest6">Email</th>
+            <th scope="col" class="guest7">Địa Chỉ</th>
+            <th scope="col" class="guest8">Bậc Khuyễn Mãi</th>
+            <th scope="col" class="guest9">Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
@@ -111,5 +111,18 @@ button.add1 {
     font-size: 20px;
     font-weight: 600;
     color:black;
+}
+th.guest9.sorting {
+    width: 14% !important;
+}
+th.guest8.sorting {
+    width: 12% !important;
+}
+th.guest3.sorting {
+    width: 7% !important;
+
+}
+th.guest2.sorting {
+    width: 12% !important;
 }
 </style>
