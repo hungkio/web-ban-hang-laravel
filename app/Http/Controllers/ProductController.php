@@ -112,9 +112,15 @@ class ProductController extends Controller
         $tablets = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Máy tính bảng']);
         $watchs = $this->productReporsitory->getProductCategory(Product::CATEGORY_CODE['Đồng hồ']);
         $sales = $this->saleRepository->getAll();
+        $sales1 = $this->saleRepository->last();
         return view('customer.index', compact(
-            'phones', 'accessorys', 'laptops', 'tablets', 'watchs'
+            'phones', 'accessorys', 'laptops', 'tablets', 'watchs','sales1'
         ));
+    }
+     public function detail($id)
+    {
+        $products = $this->productReporsitory->find($id);
+        return view('product.detail', compact('products'));
     }
 }
 

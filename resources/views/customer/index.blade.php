@@ -8,6 +8,18 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="gb-mathanguachuong_myichi">
+                        <marquee style="font-size: 15px;    font-weight: bold;    line-height: 17px;    color: red;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
+                            Chương trình khuyến mãi: Giảm ngay 
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua 
+                            <span  style="font-size: 20px; color: orange">{{$sales1 -> sale_product_type}}</span> cho khách hàng bậc trở lên
+                            <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
+
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
+                        </marquee>
+                           
                         <div class="titleCategoryProduct_myichi">
                             <h4>Sản phẩm bán chạy</h4>
                         </div>
@@ -20,12 +32,12 @@
                                     <div class="col-md-3 col-sm-3 col-xs-6">
                                         <div class="product_item_myichi">
                                             <div class="product_item_img_myichi">
-                                                <a href="#">
+                                                <a href="{{route('product.detail', $phone->id)}}">
                                                     <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
                                                 </a>
                                             </div>
                                             <div class="product_item_text_myichi">
-                                                <h2><a href="/#">{{$phone->product_name}}</a></h2>
+                                                <h2><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
                                                 <div class="product_item_price_chitiet_myichi">
                                                     <!--PRICES-->
                                                     <div class="prices_myichi">

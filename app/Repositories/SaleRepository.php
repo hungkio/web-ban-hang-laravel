@@ -28,7 +28,11 @@ class SaleRepository
         return Sale::findOrFail($id)->delete();
     }
 
-    
+    public function last()
+    {
+        return Sale::latest()->first();
+    }
+
     
 }
 

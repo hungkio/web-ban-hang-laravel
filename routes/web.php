@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::put('update/{id}', 'ProductController@update')->name('update');
         Route::get('delete/{id}', 'ProductController@destroy')->name('delete');
         Route::get('edit/{id}', 'ProductController@edit')->name('edit');
+        Route::get('detail/{id}', 'ProductController@detail')->name('detail');
         Route::get('show', 'ProductController@show')->name('show');
     });
 
@@ -68,6 +69,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('delete/{id}', 'UserController@destroy')->name('delete');
         Route::get('edit/{id}', 'UserController@edit')->name('edit');
     });
+
+    // Route::prefix('detail')->name('detail.')->group(function () {
+    //     Route::get('/', 'DetailController@index')->name('index');
+    //     Route::get('create', 'DetailController@create')->name('create');
+    //     Route::post('store', 'DetailController@store')->name('store');
+    //     Route::put('update/{id}', 'DetailController@update')->name('update');
+    //     Route::get('delete/{id}', 'DetailController@destroy')->name('delete');
+    //     Route::get('edit/{id}', 'DetailController@edit')->name('edit');
+    // });
+
 
 
     Route::prefix('report')->name('report.')->group(function () {
