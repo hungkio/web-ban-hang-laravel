@@ -67,7 +67,6 @@
 @section('script')
 <script src="/js/guest/index.js"></script>
 @endsection
-
 <style>
 
 button.add1 {
@@ -75,6 +74,10 @@ button.add1 {
     margin-top: 10px;
     border: 1px solid ;
     margin-right: 63px;
+}
+tr.bang1 th {
+    background-color: #58D3F7;
+    text-align: center;
 }
 .wrapper {
     margin: 27px;
@@ -111,10 +114,26 @@ tr.bang1 {
 button.add1 {
     height: 32px;
     width: 100px;
+    margin-bottom: 30px;
+    color: red;
+
 }
 .add1 a{
     font-size: 20px;
     font-weight: 600;
-    color:black;
+    color:red;
+}
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
 }
 </style>

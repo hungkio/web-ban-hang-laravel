@@ -9,23 +9,22 @@
     </button>
 </div>
 @endif
+<h2>Sửa khách hàng</h2>
 <div class="container">
-    <div class="col-sm-2">
-        
-    </div>
-    <div class="col-sm-8">
-        <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
-            @method('put')
-            @csrf
-            <h2 class="suasanpham">Sửa Thông Tin khách hàng</h2>
-            <div class="form-group">
-                <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
-                <div class="col-sm-9">
-                    <input id="name" class="form-control error-border" name="name" type="text" autofocus value="{{$guest->name}}">
-                    @error('name')
-                    <span class=" col-6 error-val">{{ $message  }}</span>
-                    @enderror
-                </div>
+
+    <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
+        @method('put')
+        @csrf
+
+        <h2>Sửa Thông Tin khách hàng</h2>
+
+        <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
+            <div class="col-sm-9">
+                <input id="name" class="form-control error-border" name="name" type="text" autofocus value="{{$guest->name}}">
+                @error('name')
+                <span class=" col-6 error-val">{{ $message  }}</span>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="lastName" class="col-sm-3 control-label">Giới Tính</label>
@@ -92,7 +91,6 @@
     <div class="col-sm-2">
         
     </div>
-    
 </div>
 @endsection
 @section('script')
@@ -126,3 +124,5 @@ color:black;
     color: white;
 }
 </style>
+
+

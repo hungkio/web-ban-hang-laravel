@@ -92,6 +92,7 @@ table, th, td {
 }
 tr.bang1 {
     background-color: #58D3F7;
+    height: 70px;
 }
 .btn-success {
     color: #fff;
@@ -106,11 +107,29 @@ tr.bang1 {
 button.add1 {
     height: 32px;
     width: 100px;
+   
+   
+    margin-bottom: 30px;
+    color: red;
+
 }
 .add1 a{
     font-size: 20px;
     font-weight: 600;
-    color:black;
+    color:red;
+}
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+
+th.so3 {
+    width: 7%;
 }
 th.guest9.sorting {
     width: 14% !important;
@@ -125,4 +144,5 @@ th.guest3.sorting {
 th.guest2.sorting {
     width: 12% !important;
 }
+
 </style>
