@@ -24,14 +24,14 @@
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
-            <th scope="col">ID</th>
-            <th scope="col">Tên sản phẩm</th>
-            <th scope="col">Số lượng</th>
-            <th scope="col">Loại sản phẩm</th>
-            <th scope="col">Giá nhập</th>
-            <th scope="col">Giá bán</th>
-            <th scope="col">Ảnh</th>
-            <th scope="col">Thao Tác Khác</th>
+            <th scope="col" class="product1">ID</th>
+            <th scope="col"  class="product2">Tên sản phẩm</th>
+            <th scope="col"  class="product3">Số lượng</th>
+            <th scope="col"  class="product4">Loại sản phẩm</th>
+            <th scope="col"  class="product5">Giá nhập</th>
+            <th scope="col"   class="product6">Giá bán</th>
+            <th scope="col"  class="product7">Ảnh</th>
+            <th scope="col" class="product8">Thao Tác Khác</th>
         </tr>
     </thead>
     <tbody>
@@ -93,6 +93,9 @@ table, th, td {
 tr.bang1 {
     background-color: #58D3F7;
 }
+tr.bang1 th{
+    text-align: center;
+}
 .btn-success {
     color: #fff;
     margin-right: 10px;
@@ -107,9 +110,30 @@ button.add1 {
     height: 32px;
     width: 100px;
 }
+td {
+    text-align: center;
+}
 .add1 a{
     font-size: 20px;
     font-weight: 600;
     color:black;
+}
+th.product1.sorting_asc {
+    width: 2% !important;
+}
+th.product2.sorting {
+    width: 5% !important;
+}
+th.product8.sorting {
+    width: 14% !important;
+}
+img#preview {
+    width: 151px;
+}
+th.product7.sorting {
+    width: 15% !important;
+}
+th.product2.sorting {
+    width: 18% !important;
 }
 </style>

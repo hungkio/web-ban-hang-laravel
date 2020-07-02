@@ -89,7 +89,10 @@
 .themkhachhang {
     text-align: center;
     font-weight: 700;
+    margin-bottom: 50px;
+    margin-top: 50px;
     font-size: 35px;
+    color: red;
 }
 .btn-block {
     width: 20% !important;
