@@ -26,6 +26,7 @@ class RankRequest extends FormRequest
         return [
             'rank_name' => 'required',
             'bill_count' => 'required',
+            'sale_percent'=>'required',
             'total_bills' => 'required',
         ];
     }
