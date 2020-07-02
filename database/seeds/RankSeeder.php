@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use \App\Guest;
 class RankSeeder extends Seeder
 {
     /**
@@ -12,17 +12,17 @@ class RankSeeder extends Seeder
     public function run()
     {
         $data = [
-            'rank_name' => 'silver',
+            'rank_name' => Guest::RANK_CODE['silver'],
             'bill_count'=>'25',
             'total_bills'=>'5000',
         ];
         $data1 = [
-            'rank_name' => 'gold',
+            'rank_name' => Guest::RANK_CODE['gold'],
             'bill_count'=>'35',
             'total_bills'=>'10000',
         ];
         $data2 = [
-            'rank_name' => 'diamond',
+            'rank_name' => Guest::RANK_CODE['diamond'],
             'bill_count'=>'50',
             'total_bills'=>'25000',
         ];
