@@ -19,17 +19,6 @@ Route::post('/', [ 'as' => 'login', 'uses' => 'Auth\LoginController@postLogin'])
 
 
 Route::group(['middleware' => ['auth']], function () {
-
-<<<<<<< HEAD
-    // Route::prefix('product')->name('product.')->group(function () {
-    //     Route::get('/', 'ProductController@index')->name('index');
-    //     Route::get('create', 'ProductController@create')->name('create');
-    //     Route::post('store', 'ProductController@store')->name('store');
-    //     Route::put('update/{id}', 'ProductController@update')->name('update');
-    //     Route::get('delete/{id}', 'ProductController@destroy')->name('delete');
-    //     Route::get('edit/{id}', 'ProductController@edit')->name('edit');
-    // });
-=======
      Route::prefix('product')->name('product.')->group(function () {
         Route::get('/', 'ProductController@index')->name('index');
         Route::get('create', 'ProductController@create')->name('create');
@@ -39,7 +28,6 @@ Route::group(['middleware' => ['auth']], function () {
          Route::get('edit/{id}', 'ProductController@edit')->name('edit');
      });
 
->>>>>>> 51797c3230258bf1b614e3927c9c3ca3e522c565
     Route::prefix('guest')->name('guest.')->group(function () {
         Route::get('/', 'GuestController@index')->name('index');
         Route::get('create', 'GuestController@create')->name('create');
@@ -62,5 +50,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'ReportController@index')->name('index');
         Route::get('data', 'ReportController@getData')->name('data');
     });
+    //facebook -------------
+Route::get('login/facebook', 'Auth\LoginController@f_redirectToProvider')->name('login.facebook');
+Route::get('login/facebook/callback', 'Auth\LoginController@f_handleProviderCallback')->name('login.facebook.callback');
+//google--------------
+Route::get('login/google', 'Auth\LoginController@g_redirectToProvider')->name('login.google');
+Route::get('login/google/callback', 'Auth\LoginController@g_handleProviderCallback')->name('login.google.callback');
+//---------------------
+
+
 
 });
