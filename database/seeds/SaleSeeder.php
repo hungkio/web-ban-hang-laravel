@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Product;
 class SaleSeeder extends Seeder
 {
     /**
@@ -15,7 +15,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'Điện thoại',
+                'sale_product_type'=>Product::CATEGORY_CODE['Đồng hồ'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -26,7 +26,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'Máy tính bảng',
+                'sale_product_type'=>Product::CATEGORY_CODE['Máy tính bảng'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -37,7 +37,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'Phụ kiện',
+                'sale_product_type'=>Product::CATEGORY_CODE['Laptop'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -48,7 +48,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'LAPTOP',
+                'sale_product_type'=>Product::CATEGORY_CODE['Phụ kiện'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),
@@ -59,7 +59,7 @@ class SaleSeeder extends Seeder
         {
             $data = [
                 'sale_percent' =>rand(1,40),
-                'sale_product_type'=>'Watch',
+                'sale_product_type'=>Product::CATEGORY_CODE['Điện thoại'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
                 'sale_rank'=>rand(1,3),

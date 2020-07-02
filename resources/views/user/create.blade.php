@@ -105,9 +105,13 @@
     /* text-align: center; */
 }
 .themkhachhang {
+    font-size: 30px;
+    font-weight: co;
+    font-weight: 600;
+    color: red;
     text-align: center;
-    font-weight: 700;
-    font-size: 35px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .btn-block {
     width: 20% !important;
