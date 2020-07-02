@@ -94,7 +94,7 @@ class ProductSeeder extends Seeder
            $data = [
                'product_name' =>$product_name[$i],
                'product_counts'=>rand(1,20),
-              'products_type'=> Product::CATEGORY[2],
+              'products_type'=> Product::CATEGORY_CODE['Đồng hồ'],
                'product_in_prices' => rand(100,1000),
                'product_out_prices'=> rand(200,2000),
                'image'=>$product_image[$i],
@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name2[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=> Product::CATEGORY[3],
+                'products_type'=> Product::CATEGORY_CODE['Laptop'],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
                 'image'=>$product_image2[$i],
@@ -118,7 +118,7 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name3[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=> Product::CATEGORY[5],
+                'products_type'=> Product::CATEGORY_CODE['Phụ kiện'],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
                 'image'=>$product_image3[$i],
@@ -130,7 +130,7 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name4[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=> Product::CATEGORY[1],
+                'products_type'=> Product::CATEGORY_CODE['Điện thoại'],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
                 'image'=>$product_image4[$i],
@@ -142,7 +142,7 @@ class ProductSeeder extends Seeder
             $data = [
                 'product_name' =>$product_name5[$i],
                 'product_counts'=>rand(1,20),
-                'products_type'=> Product::CATEGORY[4],
+                'products_type'=> Product::CATEGORY_CODE['Máy tính bảng'],
                 'product_in_prices' => rand(100,1000),
                 'product_out_prices'=> rand(200,2000),
                 'image'=>$product_image5[$i],

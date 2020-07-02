@@ -20,16 +20,15 @@ class ProductController extends Controller
     }
     public function store(ProductRequest $request)
     {
-        // if ($request->image) {
-        //     $request->image->storeAs('public/images', 'avatar' . $id . '.png');
-        //     $request['avatar_url'] = ('images/avatar' . $id . '.png');
-        // } else {
-        //     if ($request->image_default) {
-        //         $request['avatar_url'] = null;
-        //     }
-        // }
+        if ($request->image_file) {
+            $request->image_file->storeAs('public/images', 'product' . $id . '.png');
+            $request['image'] = ('storage/images/product' . $id . '.png');
+        } else {
+            $request['image'] = null;
+        }
         try {
-            $data = $request->all();
+            $data = $request->only('product_name', 'product_counts',
+                                   'products_type','product_in_prices','product_out_prices', 'image');
             $this->productReporsitory->create($data);
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
@@ -98,6 +97,11 @@ class ProductController extends Controller
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
         }
+    }
+    public function show()
+    {
+        $products = $this->productReporsitory->getAll();
+        return view('product.index', compact('products'));
     }
 }
 
