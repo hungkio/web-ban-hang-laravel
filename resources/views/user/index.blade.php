@@ -31,8 +31,6 @@
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Địa chỉ</th>
-           <!--  <th scope="col">Ngày cập nhât</th> -->
-           <!--  <th scope="col">Bậc Khuyễn Mãi</th>-->
             <th scope="col">Thao Tác Khác</th>
         </tr>
     </thead>
@@ -46,7 +44,6 @@
             <td>{{$row->email}}</td>
             <td>{{$row->phonenumber}}</td>
             <td>{{$row->address}}</td>
-           <!--  <td>{{$row->updated_at}}</td> -->
             <td>
                 <a class="btn btn-success" href="{{route('user.edit', $row->id)}}">
                     Chỉnh Sửa
