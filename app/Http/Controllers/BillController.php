@@ -18,6 +18,11 @@ class BillController extends Controller
         $this->billReporsitory = $billReporsitory;
         $this->guestRepository = $guestRepository;
     }
+    public function index()
+    {
+        $bill = $this->billReporsitory->getAll();
+        return view('bill.index', compact('bill'));
+    }
     public function create(Request $request)
     {
         $guests = $this->guestRepository->getAll();

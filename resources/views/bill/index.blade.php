@@ -21,38 +21,44 @@
 @endif
 </div>
 
-<div class="container">
+<div class="container"> 
     <table class="table display ui celled" id="list_guest">
         <thead>
             <tr class="bang1">
                 <th scope="col">ID</th>
-                <th scope="col">Tên rank</th>
-                <th scope="col">Số lượng hóa đơn</th>
-                <th scope="col">Phần trăm khuyến mãi</th>
+                <th scope="col">Khách hàng</th>
+                <th scope="col">List sản phẩm</th>
+                <th scope="col">khuyến mãi</th>
                 <th scope="col">Tổng hóa đơn</th>
                 <th scope="col">Ngày tạo</th>
                 <th scope="col">Ngày cập nhât</th>
-                <th scope="col">Thao Tác Khác</th>
+            <!--  <th scope="col">Bậc Khuyễn Mãi</th>-->
             </tr>
         </thead>
         <tbody>
-            @foreach($rank as $row)
+            @foreach($bill as $row)
             <tr>
                 <td>{{$row->id}}</td>
-                <td>{{App\Rank::RANK[$row->rank_code]}}</td>
-                <td>{{$row->bill_count}}</td>
-                <td>{{$row->sale_percent}}</td>
-                <td>{{$row->total_bills}}</td>
+                <td>{{\App\Guest::findOrFail($row->guest_id)['name']}}</td>
+                <td>
+                    <ul style="padding: 0">
+                        <?php
+                        $row1  = ltrim($row->products_list, '[');
+                        $row1  = rtrim($row1, ']');
+                        $ids = explode(',', $row1);
+                        foreach($ids as $id) { ?>
+                            <li class="text-center">{{App\Product::findOrFail($id)['product_name']}}</li>
+
+
+                       <?php }?>
+
+                    </ul>
+
+                </td>
+                <td>{{$row->sales}}</td>
+                <td>{{$row->total_bill}}</td>
                 <td>{{$row->created_at}}</td>
                 <td>{{$row->updated_at}}</td>
-                <td>
-                    <a class="btn btn-success" href="{{route('rank.edit', $row->id)}}">
-                        Chỉnh Sửa
-                    </a>
-                    <a class="btn btn-danger" href="{{route('rank.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
-                        Xóa
-                    </a>
-                </td>
             </tr>
             @endforeach
         </tbody>

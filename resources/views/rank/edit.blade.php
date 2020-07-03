@@ -10,7 +10,7 @@
 </div>
 @endif
 <div class="container">
-    <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('rank.update', $sale->id)}}">
+    <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('rank.update', $rank->id)}}">
         @method('put')
         @csrf
         <h2>Sửa thông tin rank</h2>
