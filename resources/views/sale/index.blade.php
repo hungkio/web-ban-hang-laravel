@@ -136,4 +136,7 @@ button.add1 {
     height: 32px;
     width: 100px;
 }
+tbody {
+    text-align: center;
+}
 </style>

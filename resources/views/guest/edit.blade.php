@@ -9,14 +9,16 @@
     </button>
 </div>
 @endif
-<h2>Sửa khách hàng</h2>
+
 <div class="container">
 
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
         @method('put')
         @csrf
 
+
         <h2>Sửa Thông Tin khách hàng</h2>
+
 
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
