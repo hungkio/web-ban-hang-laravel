@@ -11,9 +11,7 @@
                         <marquee style="font-size: 15px;    font-weight: bold;    line-height: 17px;    color: red;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                             Chương trình khuyến mãi: Giảm ngay
-                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
-                            <span  style="font-size: 20px; color: orange">{{App\Product::CATEGORY[$sales1->sale_product_type]}}</span> cho khách hàng bậc trở lên
-                            <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
 
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
@@ -225,9 +223,7 @@
 
                             <p>Chương trình khuyến mãi: Giảm ngay
                             <span style="font-size: 15px; color: red">{{$item -> sale_percent}}%</span> khi mua
-
-                            <span  style="font-size: 15px; color: red">{{App\Product::CATEGORY[$item->sale_product_type]}}</span> cho khách hàng bậc trở lên
-                            <span  style="font-size: 15px; color: red; text-transform: uppercase;">{{App\Sale::RANK[$item->sale_rank]}}</span> từ ngày
+                            <span  style="font-size: 15px; color: red; text-transform: uppercase;"></span> từ ngày
                             <span style="font-size: 15px; color: red">{{$item -> sale_begin}}</span> đến ngày
 
                             <span style="font-size: 15px; color: red">{{$item -> sale_end}}</span></p>
