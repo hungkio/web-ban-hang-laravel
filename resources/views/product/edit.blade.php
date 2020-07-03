@@ -49,6 +49,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="lastName" class="col-sm-2 control-label">Mô tả</label>
+                        <div class="col-sm-10">
+                             <textarea class="form-control" id="product_des" name="product_des">{{$products->product_des}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">Giá nhập</label>
                         <div class="col-sm-10">
                             <input id="product_in_prices" class="form-control error-border" name="product_in_prices" type="number" value="{{$products->product_in_prices}}">
@@ -90,6 +96,10 @@
 </div>
 @endsection
 @section('script')
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+CKEDITOR.replace( 'product_des' );
+</script>
 @endsection
 <style>
 img#preview {

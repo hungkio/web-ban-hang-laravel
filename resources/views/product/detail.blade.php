@@ -99,13 +99,18 @@
             </div>
         </div>
     </div>
-
-    <hr>
-    <h2>Mô tả sản phẩm</h2>
-    <p>Đây là mô tả</p>
+<hr>
+<h2>Mô tả sản phẩm</h2>
+    <div id="des" class="col-md-9">
+        {!!$products->product_des!!}
+    </div>
 
 
 </div>
 @endsection
 @section('script')
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script>
+CKEDITOR.replace( 'product_des' );
+</script>
 @endsection

@@ -36,8 +36,8 @@
                 </div>
                 <div class="row">
                 <div class="col-md-2"></div>
-                    <div class="col-md-4" id="new_guest">10</div>
-                    <div class="col-md-4" id="total_guest">20</div>
+                    <div class="col-md-4" id="new_guest">0</div>
+                    <div class="col-md-4" id="total_guest">{{$totalGuests}}</div>
                     <div class="col-md-2"></div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
 <div class="col-md-1"></div>
     <div class="col-md-3">
         <div class="card ">
-            <div class="card-body"> 
+            <div class="card-body">
                 <h3 class="card-title col-md-12">Rank Silver</h3>
                 <span class="main-number" id="rankA">10000  -  </span>
                 <span class="main-number pt-1" id="rankARatio">25%</span>
@@ -111,11 +111,11 @@
                         <div class="col-md-3"></div>
                             <div class="col-md-4">
                                 <div class="main-number" id="rankA">Bán ra</div>
-                                <div class="main-number pt-1" id="rankARatio">25</div>
+                                <div class="main-number pt-1" id="count_sold"></div>
                             </div>
                             <div class="col-md-4">
                                 <div class="main-number" id="rankA">Còn lại</div>
-                                <div class="main-number pt-1" id="rankARatio">20</div>
+                                <div class="main-number pt-1" id="rankARatio">{{$count}}</div>
                             </div>
                             <div class="col-md-1"></div>
                         </div>
@@ -128,7 +128,7 @@
                 <div class="card ">
                     <div class="card-body">
                         <h3 class="card-title col-md-12">Phí Chi</h3>
-                        <div class="main-number" id="rankA">10000</div>
+                        <div class="main-number" id="rankA">{{$out_prices}}</div>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                 <div class="card ">
                     <div class="card-body">
                         <h3 class="card-title col-md-12">Phí Thu</h3>
-                        <div class="main-number" id="rankB">5000</div>
+                        <div class="main-number" id="in_prices"></div>
                     </div>
                 </div>
             </div>
@@ -144,14 +144,14 @@
                 <div class="card ">
                     <div class="card-body">
                         <h3 class="card-title col-md-12">Số Chương Trình khuyến mãi</h3>
-                        <div class="main-number" id="rankC">10000</div>
+                        <div class="main-number" id="sales"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-1"></div>
 
             </div>
-            
+
         </div>
     </div>
 </div>
