@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($rank as $row)
+            @foreach($ranks as $row)
             <tr>
                 <td>{{$row->id}}</td>
                 <td>{{App\Rank::RANK[$row->rank_code]}}</td>
@@ -48,9 +48,6 @@
                 <td>
                     <a class="btn btn-success" href="{{route('rank.edit', $row->id)}}">
                         Chỉnh Sửa
-                    </a>
-                    <a class="btn btn-danger" href="{{route('rank.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
-                        Xóa
                     </a>
                 </td>
             </tr>
@@ -101,7 +98,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-   
+
     background-color: #5cb85c;
     border-color: #4cae4c;
 }

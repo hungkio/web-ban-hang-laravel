@@ -34,5 +34,9 @@ class GuestRepository
         ->where('created_at', '<=', Carbon::parse($request['end_date']))
         ->get();
     }
+    public function rankGuest($rank)
+    {
+        return Guest::where('sale_rank', $rank)->get();
+    }
 }
 

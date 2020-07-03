@@ -21,7 +21,7 @@
 @endif
 </div>
 <button class="add1"><a href="{{route('sale.create')}}">Thêm</a></button>
-<div class="container"> 
+<div class="container">
     <table class="table display ui celled" id="list_guest">
         <thead>
             <tr class="bang1">
@@ -30,10 +30,8 @@
                 <th scope="col">Phần trăm</th>
                 <th scope="col">Thời gian bắt đầu</th>
                 <th scope="col">Thời gian kết thúc</th>
-                <th scope="col">Rank</th>
                 <th scope="col">Ngày tạo</th>
                 <th scope="col">Ngày cập nhât</th>
-            <!--  <th scope="col">Bậc Khuyễn Mãi</th>-->
                 <th scope="col">Thao Tác Khác</th>
             </tr>
         </thead>
@@ -41,11 +39,10 @@
             @foreach($sales as $row)
             <tr>
                 <td>{{$row->id}}</td>
-                <td>{{$row->sale_product_type}}</td>
+                <td>{{App\Product::CATEGORY[$row->sale_product_type]}}</td>
                 <td>{{$row->sale_percent}}</td>
                 <td>{{$row->sale_begin}}</td>
                 <td>{{$row->sale_end}}</td>
-{{--                <td>{{App\Sale::RANK[$row->sale_rank]}}</td>--}}
                 <td>{{$row->created_at}}</td>
                 <td>{{$row->updated_at}}</td>
                 <td>
@@ -65,6 +62,7 @@
 
 @endsection
 @section('script')
+<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="/js/guest/index.js"></script>
 @endsection
 <style>
@@ -104,7 +102,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-   
+
     background-color: #5cb85c;
     border-color: #4cae4c;
 }

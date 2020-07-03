@@ -27,7 +27,6 @@ class SaleRequest extends FormRequest
             'sale_percent' => 'required',
             'sale_begin' => 'required',
             'sale_end' => 'required',
-            
         ];
     }
 }
