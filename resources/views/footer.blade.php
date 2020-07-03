@@ -14,7 +14,7 @@
                         <div class="col-md-3">
 
                             <div class="gb-footer1_myichi">
-                                <h4 class="abcd">Thông tin về công ty</h4>
+                                <h4 class="abcd">Thông tin về chúng tôi</h4>
 
                                 <!-- <ul>
 

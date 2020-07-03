@@ -15,9 +15,6 @@
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.update', $guest->id)}}">
         @method('put')
         @csrf
-
-    
-
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
             <div class="col-sm-9">

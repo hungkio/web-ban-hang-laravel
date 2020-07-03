@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RankRequest;
 use App\Repositories\RankRepository;
 
-class GuestController extends Controller
+class RankController extends Controller
 {
     protected $rankReporsitory;
     public function __construct(RankRepository $rankReporsitory)
@@ -16,7 +16,7 @@ class GuestController extends Controller
     public function edit($id)
     {
         $rank = $this->rankReporsitory->find($id);
-        return view('rank.edit', compact('ranks'));
+        return view('rank.edit', compact('rank'));
     }
     public function store(RankRequest $request)
     {
@@ -36,7 +36,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->rankReporsitory->getAll();
+        $ranks = $this->rankReporsitory->getAll();
         return view('rank.index', compact('ranks'));
     }
 

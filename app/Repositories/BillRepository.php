@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Product;
 use App\Bill;
+use App\Guest;
 
 class BillRepository
 {
@@ -11,6 +12,7 @@ class BillRepository
     {
         return Bill::findOrFail($id);
     }
+
     public function getAll()
     {
         return Bill::all();
@@ -26,6 +28,10 @@ class BillRepository
     public function delete($id)
     {
         return Bill::findOrFail($id)->delete();
+    }
+    public function findArray($ids)
+    {
+        return Product::find($ids);
     }
 }
 

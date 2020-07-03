@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('edit/{id}', 'GuestController@edit')->name('edit');
     });
 
-    Route::prefix('ranks')->name('rank.')->group(function () {
+    Route::prefix('rank')->name('rank.')->group(function () {
         Route::get('/', 'RankController@index')->name('index');
         Route::get('create', 'RankController@create')->name('create');
         Route::post('store', 'RankController@store')->name('store');
@@ -85,9 +85,9 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::prefix('bill')->name('bill.')->group(function () {
-        Route::get('/', 'BillController@create')->name('create');
+        Route::get('/', 'BillController@index')->name('index');
+        Route::post('create', 'BillController@create')->name('create');
         Route::post('store', 'BillController@store')->name('store');
-        Route::get('data', 'BillController@getData')->name('data');
     });
 
     //facebook -------------
@@ -98,5 +98,5 @@ Route::get('login/google', 'Auth\LoginController@g_redirectToProvider')->name('l
 Route::get('login/google/callback', 'Auth\LoginController@g_handleProviderCallback')->name('login.google.callback');
 //---------------------
 
-    
+
 });
