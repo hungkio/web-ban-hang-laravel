@@ -85,9 +85,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::prefix('bill')->name('bill.')->group(function () {
-        Route::get('/', 'BillController@create')->name('create');
+        Route::post('/', 'BillController@create')->name('create');
         Route::post('store', 'BillController@store')->name('store');
-        Route::get('data', 'BillController@getData')->name('data');
     });
 
     //facebook -------------
@@ -98,5 +97,5 @@ Route::get('login/google', 'Auth\LoginController@g_redirectToProvider')->name('l
 Route::get('login/google/callback', 'Auth\LoginController@g_handleProviderCallback')->name('login.google.callback');
 //---------------------
 
-    
+
 });

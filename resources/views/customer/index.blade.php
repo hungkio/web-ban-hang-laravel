@@ -9,8 +9,8 @@
                     <div class="gb-mathanguachuong_myichi">
                         <marquee style="font-size: 25px;    font-weight: bold;    line-height: 17px; background-color: #81F7D8;   color: red;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
-                            Chương trình khuyến mãi: Giảm ngay 
-                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua 
+                            Chương trình khuyến mãi: Giảm ngay
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
                             <span  style="font-size: 20px; color: orange">{{App\Product::CATEGORY[$sales1->sale_product_type]}}</span> cho khách hàng bậc trở lên
                             <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
@@ -52,27 +52,21 @@
                                             <div class="product_item_myichi">
                                                 <div class="product_item_img_myichi">
                                                 <a href="{{route('product.detail', $phone->id)}}">
-                                                            <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
-                                                        </a>
-                                                    <!--SALE-->
-                                                
-                                                </div>
-                                                <div class="product_item_text_myichi">
-                                                   
-                                                    <div class="product_item_text_myichi">
-                                                        <h2 class="sanpham"><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
-                                                        <div class="product_item_price_chitiet_myichi">
-                                                            <!--PRICES-->
-                                                            <div class="prices_myichi">
-                                                                <p class="prices-news_myichi">Giá:{{$phone->product_out_prices}} vnđ</p>
-                                                                <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
-                                                            </div>
-                                                            <div class="gb-btnmuahang_myichi">
-                                                                <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
-                                                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                                </button>
-                                                            </div>
-                                                        </div>
+                                                    <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="product_item_text_myichi">
+                                                <h2><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
+                                                <div class="product_item_price_chitiet_myichi">
+                                                    <!--PRICES-->
+                                                    <div class="prices_myichi">
+                                                        <p class="prices-news_myichi">{{$phone->product_out_prices}} vnđ</p>
+                                                    </div>
+                                                    <div class="gb-btnmuahang_myichi">
+                                                        <input class="id-product" type="hidden" value="{{$phone->id}}">
+                                                        <button type="button" name="add-to-cart" id="add-to-cart-{{$phone->id}}" class="btn btn-addtocart_naustore btn_addCart" >
+                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -418,7 +412,6 @@
                         <!--LASTEST POST DESKTOP-->
                         <div class="gb-latest-post-body-desktop">
                             <div class="owl-three-item-dotted owl-carousel owl-theme">
-
                                 <div class="item">
                                     <div class="blog-grid-item">
                                         <article class="post type-post">
@@ -484,8 +477,8 @@
         font-weight: bold;
         animation: my 700ms infinite;
     }
-    @keyframes my { 
-     0% { color: #F8CD0A;  } 
+    @keyframes my {
+     0% { color: #F8CD0A;  }
      50% { color: #d33;  }
      100% { color: #F8CD0A;  } 
      } 

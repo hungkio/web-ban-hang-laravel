@@ -25,8 +25,6 @@ class BillRequest extends FormRequest
     {
         return [
             'guest_id' => 'required',
-            'products_list' => 'required' ,
-            'products_name' => 'required',
             'total_bill' => 'required',
         ];
     }
