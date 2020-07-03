@@ -27,7 +27,7 @@
 
 
             <div class="col-md-2">
-                <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="go_to_cart">
                     <i class="fa fa-shopping-bag" aria-hidden="true"></i> Giỏ hàng (<span id="count">0</span>)
                 </button>
 
@@ -104,7 +104,7 @@
                                         <div class="product_item_text_myichi">
                                             <h2><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
                                             <div class="product_item_price_chitiet_myichi">
-                                                <!--PRICES-->
+                                                {{-- PRICES --}}
                                                 <div class="prices_myichi">
                                                     <p class="prices-news_myichi">{{$phone->product_out_prices}} vnđ</p>
                                                 </div>
@@ -118,8 +118,8 @@
                                         </div>
 
                                     </div>
-                                </div>
 
+</div>
                                 @endforeach
 
 
@@ -451,25 +451,25 @@
                 </div>
 
             </section>
-
-            <div class="gb-latest-post_myichi">
-                <div class="titleCategoryProduct_myichi">
-                    <h4>Chương trình khuyến mãi</h4>
-                    <div class="aaa234"></div>
-                </div>
-                <div class="gb-latest-post-body">
-                    <!--LASTEST POST DESKTOP-->
-                    <div class="gb-latest-post-body-desktop">
-                        <div class="owl-three-item-dotted owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="blog-grid-item">
-                                    <article class="post type-post">
-                                        <div class="content-inner">
-                                            <div class="gb-entry-top">
-                                                <div class="thumbnail-img">
-                                                    <a href="#" title="">
-                                                        <img src="images/aaaa.jpg" alt="" title="" class="img-responsive">
-                                                    </a>
+                <div class="gb-latest-post_myichi">
+                    <div class="titleCategoryProduct_myichi">
+                        <h4>Chương trình khuyến mãi</h4>
+                        <div class="aaa234"></div>
+                    </div>
+                    <div class="gb-latest-post-body">
+                        <!--LASTEST POST DESKTOP-->
+                        <div class="gb-latest-post-body-desktop">
+                            <div class="owl-three-item-dotted owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="blog-grid-item">
+                                        <article class="post type-post">
+                                            <div class="content-inner">
+                                                <div class="gb-entry-top">
+                                                    <div class="thumbnail-img">
+                                                        <a href="#" title="">
+                                                            <img src="images/sale.jpg" alt="" title="" class="img-responsive">
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="gb-divider"></div>
@@ -481,19 +481,19 @@
                                                     </header>
                                                     <div class="gb-divider"></div>
 
+
+
                                                     <div class="entry-excerpt nhapnhay">
                                                         @foreach($saleslimit as $item)
 
-                                                        <p>Chương trình khuyến mãi: Giảm ngay
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_percent}}%</span> khi mua từ ngày
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_begin}}</span> đến ngày
+                                                            <p>Chương trình khuyến mãi: Giảm ngay
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_percent}}%</span> khi mua từ ngày
 
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_end}}</span></p>
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_begin}}</span> đến ngày
 
-                                                            @endforeach
-                                                        </div>
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_end}}</span></p>
 
-
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </article>
@@ -512,25 +512,27 @@
 
                         </div>
 
+@endsection
+@section('script')
+@endsection
+<style>
+    .nhapnhay p:first-child,  .nhapnhay p:first-child span{
+        font-size: 17px;
+        font-weight: bold;
+        animation: my 700ms infinite;
+    }
+    @keyframes my {
+     0% { color: #F8CD0A;  }
+     50% { color: #d33;  }
 
-                        @endsection
-                        @section('script')
-                        @endsection
-                        <style>
-                            .nhapnhay p:first-child,  .nhapnhay p:first-child span{
-                                font-size: 27px;
-                                font-weight: bold;
-                                animation: my 700ms infinite;
-                            }
-                            @keyframes my {
-                                0% { color: #F8CD0A;  }
-                                50% { color: #d33;  }
-                                100% { color: #F8CD0A;  }
-                            }
-                            .aaa234 {
-                                border: 2px solid red;
-                                width: 90px;
-                                text-align: center;
-                                margin-left: 46%;
-                            }
-                        </style>
+
+     100% { color: #F8CD0A;  }
+     }
+
+     .aaa234 {
+    border: 2px solid red;
+    width: 90px;
+    text-align: center;
+    margin-left: 46%;
+}
+</style>

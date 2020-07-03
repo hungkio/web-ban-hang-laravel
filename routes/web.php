@@ -39,12 +39,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('edit/{id}', 'GuestController@edit')->name('edit');
     });
 
-    Route::prefix('ranks')->name('rank.')->group(function () {
+    Route::prefix('rank')->name('rank.')->group(function () {
         Route::get('/', 'RankController@index')->name('index');
         Route::get('create', 'RankController@create')->name('create');
         Route::post('store', 'RankController@store')->name('store');
         Route::put('update/{id}', 'RankController@update')->name('update');
-        Route::get('delete/{id}', 'RankController@destroy')->name('delete');
         Route::get('edit/{id}', 'RankController@edit')->name('edit');
     });
 
@@ -68,16 +67,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('edit/{id}', 'UserController@edit')->name('edit');
     });
 
-    // Route::prefix('detail')->name('detail.')->group(function () {
-    //     Route::get('/', 'DetailController@index')->name('index');
-    //     Route::get('create', 'DetailController@create')->name('create');
-    //     Route::post('store', 'DetailController@store')->name('store');
-    //     Route::put('update/{id}', 'DetailController@update')->name('update');
-    //     Route::get('delete/{id}', 'DetailController@destroy')->name('delete');
-    //     Route::get('edit/{id}', 'DetailController@edit')->name('edit');
-    // });
-
-
 
     Route::prefix('report')->name('report.')->group(function () {
         Route::get('/', 'ReportController@index')->name('index');
@@ -85,17 +74,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::prefix('bill')->name('bill.')->group(function () {
-        Route::post('/', 'BillController@create')->name('create');
+        Route::get('/', 'BillController@index')->name('index');
+        Route::post('create', 'BillController@create')->name('create');
         Route::post('store', 'BillController@store')->name('store');
     });
-
-    //facebook -------------
-Route::get('login/facebook', 'Auth\LoginController@f_redirectToProvider')->name('login.facebook');
-Route::get('login/facebook/callback', 'Auth\LoginController@f_handleProviderCallback')->name('login.facebook.callback');
-//google--------------
-Route::get('login/google', 'Auth\LoginController@g_redirectToProvider')->name('login.google');
-Route::get('login/google/callback', 'Auth\LoginController@g_handleProviderCallback')->name('login.google.callback');
-//---------------------
-
-
 });

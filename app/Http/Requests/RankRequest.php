@@ -24,7 +24,7 @@ class RankRequest extends FormRequest
     public function rules()
     {
         return [
-            'rank_name' => 'required',
+            'rank_code' => 'required',
             'bill_count' => 'required',
             'sale_percent'=>'required',
             'total_bills' => 'required',

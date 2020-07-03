@@ -20,50 +20,54 @@
 </div>
 @endif
 </div>
-<button class="add1"><a href="{{route('user.create')}}">Thêm</a></button>
-<div class="container">
+
+<div class="container"> 
     <table class="table display ui celled" id="list_guest">
         <thead>
             <tr class="bang1">
-                <th scope="col">Username</th>
-                <th scope="col">Name</th>
-                <th scope="col">Age</th>
-                <th scope="col">Sex</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Địa chỉ</th>
-                <th scope="col">Thao Tác Khác</th>
+                <th scope="col">ID</th>
+                <th scope="col">Khách hàng</th>
+                <th scope="col">List sản phẩm</th>
+                <th scope="col">khuyến mãi</th>
+                <th scope="col">Tổng hóa đơn</th>
+                <th scope="col">Ngày tạo</th>
+                <th scope="col">Ngày cập nhât</th>
+            <!--  <th scope="col">Bậc Khuyễn Mãi</th>-->
             </tr>
         </thead>
         <tbody>
-            @foreach($users as $row)
+            @foreach($bill as $row)
             <tr>
-                <td>{{$row->username}}</td>
-                <td>{{$row->name}}</td>
-                <td>{{$row->age}}</td>
-                <td>{{App\User::GENDER[$row->sex]}}</td>
-                <td>{{$row->email}}</td>
-                <td>{{$row->phonenumber}}</td>
-                <td>{{$row->address}}</td>
+                <td>{{$row->id}}</td>
+                <td>{{\App\Guest::findOrFail($row->guest_id)['name']}}</td>
                 <td>
-                    <a class="btn btn-success" href="{{route('user.edit', $row->id)}}">
-                        Chỉnh Sửa
-                    </a>
-                    @if(auth()->id() != $row->id)
-                    <a class="btn btn-danger" href="{{route('user.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
-                        Xóa
-                    </a>
-                    @endif
+                    <ul style="padding: 0">
+                        <?php
+                        $row1  = ltrim($row->products_list, '[');
+                        $row1  = rtrim($row1, ']');
+                        $ids = explode(',', $row1);
+                        foreach($ids as $id) { ?>
+                            <li class="text-center">{{App\Product::findOrFail($id)['product_name']}}</li>
+
+
+                       <?php }?>
+
+                    </ul>
+
                 </td>
+                <td>{{$row->sales}}</td>
+                <td>{{$row->total_bill}}</td>
+                <td>{{$row->created_at}}</td>
+                <td>{{$row->updated_at}}</td>
             </tr>
             @endforeach
         </tbody>
     </table>
+
 </div>
 
 @endsection
 @section('script')
-<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="/js/guest/index.js"></script>
 @endsection
 <style>
@@ -73,6 +77,10 @@ button.add1 {
     margin-top: 10px;
     border: 1px solid ;
     margin-right: 63px;
+}
+tr.bang1 th {
+    background-color: #58D3F7;
+    text-align: center;
 }
 .wrapper {
     margin: 27px;
@@ -99,7 +107,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-
+   
     background-color: #5cb85c;
     border-color: #4cae4c;
 }
@@ -109,10 +117,29 @@ tr.bang1 {
 button.add1 {
     height: 32px;
     width: 100px;
+    margin-bottom: 30px;
+    color: red;
+
 }
 .add1 a{
     font-size: 20px;
     font-weight: 600;
-    color:black;
+    color:red;
+}
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
+}
+tbody {
+    text-align: center;
 }
 </style>

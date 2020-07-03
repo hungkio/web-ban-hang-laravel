@@ -29,7 +29,7 @@
     @csrf
     <table class="table display ui celled" id="list_guest">
         <thead>
-            <tr>
+            <tr class="bang1">
                 <th scope="col">STT</th>
                 <th scope="col">Tên Sản Phẩm</th>
                 <th scope="col">Số Lượng</th>
@@ -66,7 +66,7 @@
         </tbody>
     </table>
     <div>Tổng: <p id="total"></p> <input type="hidden" name="total_bill" value=""></div>
-    <button type="button" id="thanhtoan">Thanh Toán</button>
+    <button class="btn" style="background: #0099FF; color: white; font-weight: bold; margin: 25px auto; " type="button" id="thanhtoan">Thanh Toán</button>
 </form>
 @endsection
 @section('script')
@@ -137,3 +137,80 @@
     });
 </script>
 @endsection
+<style>
+
+button.add1 {
+    float: right;
+    margin-top: 10px;
+    border: 1px solid ;
+    margin-right: 63px;
+}
+tr.bang1 th {
+    background-color: #58D3F7;
+    text-align: center;
+}
+.wrapper {
+    margin: 27px;
+}
+div#list_guest_length {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    float: left;
+}
+div#list_guest_filter label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table, th, td {
+ border: 1px solid #ddd !important;
+ }
+ tr:nth-child(even) {
+    background-color: #A9F5F2;
+}
+tr.bang1 {
+    background-color: #58D3F7;
+}
+.btn-success {
+    color: #fff;
+    margin-right: 10px;
+   
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.chinhsua{
+    text-align: center;
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
+    margin-bottom: 30px;
+    color: red;
+
+}
+.add1 a{
+    font-size: 20px;
+    font-weight: 600;
+    color:red;
+}
+.add1 a:hover{
+
+    color:white;
+}
+button.add1:hover{
+    background-color: red;
+    color:white
+
+}
+button.add1 {
+    height: 32px;
+    width: 100px;
+}
+tbody {
+    text-align: center;
+}
+</style>
+
+
+
+
