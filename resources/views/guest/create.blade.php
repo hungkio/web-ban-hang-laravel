@@ -13,7 +13,7 @@
 <h2 class="themkhachhang">Thêm khách hàng</h2>
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.store')}}">
         @csrf
-        
+
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
             <div class="col-sm-9">
@@ -36,7 +36,7 @@
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Tuổi</label>
             <div class="col-sm-9">
-                <input id="age" class="form-control error-border" name="age" type="text" value="">
+                <input id="age" class="form-control error-border" name="age" type="number" value="">
                 @error('age')
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
@@ -70,8 +70,8 @@
         <button type="submit" class="btn btn-primary btn-block">Save</button>
         <button type="submit" class="btn btn-primary btn-block" style="margin-top: 0px; "> <a href="{{route('guest.index')}}">Quay lại</a></button>
         </div>
-       
-        
+
+
     </form>
 </div>
 @endsection
@@ -100,7 +100,7 @@
     margin-right: 45px;
 }
 .save{
- 
+
     margin-left: 40%;
     margin-bottom: 100px;
 color:black;

@@ -21,7 +21,7 @@
 @endif
 </div>
 <button class="add1"><a href="{{route('product.create')}}">Thêm</a></button>
-<table class="table display ui celled" id="list_guest">
+<table class="table display ui celled" id="list_product">
     <thead>
         <tr class="bang1">
             <th scope="col" class="product1">ID</th>
@@ -60,82 +60,89 @@
 </table>
 @endsection
 @section('script')
-<script src="/js/guest/index.js"></script>
+<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script>
+
+    $(function () {
+        $('#list_product').DataTable();
+    })
+
+</script>
 @endsection
 
 <style>
 
-button.add1 {
-    float: right;
-    margin-top: 10px;
-    border: 1px solid ;
-    margin-right: 63px;
-}
-.wrapper {
-    margin: 27px;
-}
-div#list_guest_length {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 100px;
-    float: left;
-}
-div#list_guest_filter label{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-table, th, td {
- border: 1px solid #ddd !important;
- }
- tr:nth-child(even) {
-    background-color: #A9F5F2;
-}
-tr.bang1 {
-    background-color: #58D3F7;
-}
-tr.bang1 th{
-    text-align: center;
-}
-.btn-success {
-    color: #fff;
-    margin-right: 10px;
+    button.add1 {
+        float: right;
+        margin-top: 10px;
+        border: 1px solid ;
+        margin-right: 63px;
+    }
+    .wrapper {
+        margin: 27px;
+    }
+    div#list_guest_length {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 100px;
+        float: left;
+    }
+    div#list_guest_filter label{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ddd !important;
+    }
+    tr:nth-child(even) {
+        background-color: #A9F5F2;
+    }
+    tr.bang1 {
+        background-color: #58D3F7;
+    }
+    tr.bang1 th{
+        text-align: center;
+    }
+    .btn-success {
+        color: #fff;
+        margin-right: 10px;
 
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-}
-.chinhsua{
-    text-align: center;
-}
-button.add1 {
-    height: 32px;
-    width: 100px;
-    
-    margin-bottom: 20px;
-}
-td {
-    text-align: center;
-}
-.add1 a{
-    font-size: 20px;
-    font-weight: 600;
-    color:black;
-}
-th.product1.sorting_asc {
-    width: 2% !important;
-}
-th.product2.sorting {
-    width: 5% !important;
-}
-th.product8.sorting {
-    width: 14% !important;
-}
-img#preview {
-    width: 151px;
-}
-th.product7.sorting {
-    width: 15% !important;
-}
-th.product2.sorting {
-    width: 18% !important;
-}
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+    }
+    .chinhsua{
+        text-align: center;
+    }
+    button.add1 {
+        height: 32px;
+        width: 100px;
+
+        margin-bottom: 20px;
+    }
+    td {
+        text-align: center;
+    }
+    .add1 a{
+        font-size: 20px;
+        font-weight: 600;
+        color:black;
+    }
+    th.product1.sorting_asc {
+        width: 2% !important;
+    }
+    th.product2.sorting {
+        width: 5% !important;
+    }
+    th.product8.sorting {
+        width: 14% !important;
+    }
+    img#preview {
+        width: 151px;
+    }
+    th.product7.sorting {
+        width: 15% !important;
+    }
+    th.product2.sorting {
+        width: 18% !important;
+    }
 </style>

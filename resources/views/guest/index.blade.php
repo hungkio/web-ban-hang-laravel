@@ -20,7 +20,7 @@
 </div>
 @endif
 </div>
-<button class="add1"><a href="{{route('guest.create')}}">Thêm</a></button>
+<a href="{{route('guest.create')}}"><button class="add1">Thêm</button></a>
 <table class="table display ui celled" id="list_guest">
     <thead>
         <tr class="bang1">
@@ -60,6 +60,7 @@
 </table>
 @endsection
 @section('script')
+<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="/js/guest/index.js"></script>
 @endsection
 
@@ -97,7 +98,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-   
+
     background-color: #5cb85c;
     border-color: #4cae4c;
 }
@@ -107,8 +108,8 @@ tr.bang1 {
 button.add1 {
     height: 32px;
     width: 100px;
-   
-   
+
+
     margin-bottom: 30px;
     color: red;
 

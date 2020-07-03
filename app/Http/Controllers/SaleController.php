@@ -20,7 +20,7 @@ class SaleController extends Controller
     public function store(SaleRequest $request)
     {
         try {
-            
+
             $this->saleRepository->create($request->all());
             return redirect()->route('sale.index')
             ->with('success', 'Created Success!');
@@ -59,7 +59,7 @@ class SaleController extends Controller
     public function update(SaleRequest $request, $id)
     {
         try {
-            $this->saleRepository->update($id, $request->only('sale_product_type','sale_percent', 'created_date', 'updated_date', 'sale_rank'));
+            $this->saleRepository->update($id, $request->only('sale_product_type','sale_percent', 'sale_begin', 'sale_end'));
             return redirect()->route('sale.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
