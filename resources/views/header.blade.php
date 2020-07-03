@@ -24,6 +24,7 @@
                                     <li class="hiasda"><a href="#">Quản lí</a>
                                         <ul class="dmcuocdoi">
                                             <li><a href="{{route('guest.index')}}">Khách Hàng</a></li>
+                                            <li><a href="{{route('bill.index')}}">Hóa Đơn</a></li>
                                             <li><a href="{{route('rank.index')}}">Hạng</a></li>
                                             <li><a href="{{route('user.index')}}">Tài khoản</a></li>
                                         </ul>
