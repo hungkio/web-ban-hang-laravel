@@ -12,7 +12,7 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                             Chương trình khuyến mãi: Giảm ngay
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
-                            <span  style="font-size: 20px; color: orange">{{$sales1 -> sale_product_type}}</span> cho khách hàng bậc trở lên
+                            <span  style="font-size: 20px; color: orange">{{App\Product::CATEGORY[$sales1->sale_product_type]}}</span> cho khách hàng bậc trở lên
                             <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
 
@@ -196,7 +196,7 @@
 
             <div class="gb-latest-post_myichi">
                 <div class="titleCategoryProduct_myichi">
-                    <h4>Tin khuyến mãi</h4>
+                    <h4>Chương trình khuyến mãi</h4>
                 </div>
                 <div class="gb-latest-post-body">
                     <!--LASTEST POST DESKTOP-->
@@ -216,15 +216,23 @@
                                             <div class="gb-divider"></div>
                                             <div class="gb-entry-content">
                                                 <header class="gb-entry-header">
-                                                    <h2 class="gb-entry-title">
-                                                        <a href="/#" rel="">Tin khuyến mãi</a>
-                                                    </h2>
                                                 </header>
 
                                                 <div class="gb-divider"></div>
 
-                                                <div class="entry-excerpt">
-                                                    <p>Mô tả ngắn tin tức</p>
+                                                <div class="entry-excerpt nhapnhay">
+                                                    @foreach($saleslimit as $item)
+
+                            <p>Chương trình khuyến mãi: Giảm ngay
+                            <span style="font-size: 15px; color: red">{{$item -> sale_percent}}%</span> khi mua
+
+                            <span  style="font-size: 15px; color: red">{{App\Product::CATEGORY[$item->sale_product_type]}}</span> cho khách hàng bậc trở lên
+                            <span  style="font-size: 15px; color: red; text-transform: uppercase;">{{App\Sale::RANK[$item->sale_rank]}}</span> từ ngày
+                            <span style="font-size: 15px; color: red">{{$item -> sale_begin}}</span> đến ngày
+
+                            <span style="font-size: 15px; color: red">{{$item -> sale_end}}</span></p>
+
+                                                     @endforeach
                                                 </div>
 
 
@@ -247,3 +255,15 @@
 @endsection
 @section('script')
 @endsection
+<style>
+    .nhapnhay p:first-child,  .nhapnhay p:first-child span{
+        font-size: 17px;
+        font-weight: bold;
+        animation: my 700ms infinite;
+    }
+    @keyframes my {
+     0% { color: #F8CD0A;  }
+     50% { color: #d33;  }
+     100% { color: #F8CD0A;  }
+     }
+</style>
