@@ -66,7 +66,7 @@
         </tbody>
     </table>
     <div>Tổng: <p id="total"></p> <input type="hidden" name="total_bill" value=""></div>
-    <button type="button" id="thanhtoan">Thanh Toán</button>
+    <button class="btn" style="background: #0099FF; color: white; font-weight: bold; margin: 25px auto; " type="button" id="thanhtoan">Thanh Toán</button>
 </form>
 @endsection
 @section('script')
