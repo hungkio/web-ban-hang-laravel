@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RankRequest;
 use App\Repositories\RankRepository;
 
-class GuestController extends Controller
+class RankController extends Controller
 {
     protected $rankReporsitory;
     public function __construct(RankRepository $rankReporsitory)
