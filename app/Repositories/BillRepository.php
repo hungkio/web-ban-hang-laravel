@@ -27,5 +27,9 @@ class BillRepository
     {
         return Bill::findOrFail($id)->delete();
     }
+    public function findArray($ids)
+    {
+        return Product::find($ids);
+    }
 }
 

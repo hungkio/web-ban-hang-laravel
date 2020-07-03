@@ -10,8 +10,8 @@
                     <div class="gb-mathanguachuong_myichi">
                         <marquee style="font-size: 15px;    font-weight: bold;    line-height: 17px;    color: red;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
-                            Chương trình khuyến mãi: Giảm ngay 
-                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua 
+                            Chương trình khuyến mãi: Giảm ngay
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
                             <span  style="font-size: 20px; color: orange">{{$sales1 -> sale_product_type}}</span> cho khách hàng bậc trở lên
                             <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
@@ -19,7 +19,7 @@
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                         </marquee>
-                           
+
                         <div class="titleCategoryProduct_myichi">
                             <h4>Sản phẩm bán chạy</h4>
                         </div>
@@ -44,7 +44,8 @@
                                                         <p class="prices-news_myichi">{{$phone->product_out_prices}} vnđ</p>
                                                     </div>
                                                     <div class="gb-btnmuahang_myichi">
-                                                        <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                        <input class="id-product" type="hidden" value="{{$phone->id}}">
+                                                        <button type="button" name="add-to-cart" id="add-to-cart-{{$phone->id}}" class="btn btn-addtocart_naustore btn_addCart" >
                                                             <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
                                                         </button>
                                                     </div>
@@ -195,7 +196,7 @@
 
             <div class="gb-latest-post_myichi">
                 <div class="titleCategoryProduct_myichi">
-                    <h4>Tin tức</h4>
+                    <h4>Tin khuyến mãi</h4>
                 </div>
                 <div class="gb-latest-post-body">
                     <!--LASTEST POST DESKTOP-->
@@ -209,7 +210,6 @@
                                             <div class="gb-entry-top">
                                                 <div class="thumbnail-img">
                                                     <a href="#" title="">
-                                                        <img src="images/aaa.jpg" alt="" title="" class="img-responsive">
                                                     </a>
                                                 </div>
                                             </div>
@@ -217,7 +217,7 @@
                                             <div class="gb-entry-content">
                                                 <header class="gb-entry-header">
                                                     <h2 class="gb-entry-title">
-                                                        <a href="/#" rel="">Tên tin tức</a>
+                                                        <a href="/#" rel="">Tin khuyến mãi</a>
                                                     </h2>
                                                 </header>
 
