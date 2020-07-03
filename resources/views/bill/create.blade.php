@@ -56,7 +56,7 @@
             @endforeach
         </tbody>
     </table>
-    <button type="submit">Thanh Toán</button>
+    <button type="submit" class="btn" style="background: #0099FF; color: white; font-weight: bold; margin: 25px auto; ">Thanh Toán</button>
 </form>
 @endsection
 @section('script')

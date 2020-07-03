@@ -34,7 +34,7 @@ p {
   line-height: 1.5; }
 
 .container {
-  width: 1300px; }
+  width: 1200px; }
   @media screen and (max-width: 1320px) {
     .container {
       width: 100%; } }
