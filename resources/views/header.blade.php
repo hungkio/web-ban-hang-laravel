@@ -98,7 +98,11 @@
                                     <li><a href="#">Trang chủ</a></li>
                                     <li><a href="#">Sản phẩm</a></li>
                                     <li class="has-sub"><a href="#">Chương trình khuyến mại</a></li>
-                                    <li><a href="#">Báo cáo</a></li>
+                                    <li><a href="#">Báo cáo</a>
+
+                                    
+                                    </li>
+
                                     <li><a href="#">Đăng xuất</a></li>
                                     <!-- <li><a href="#">Tin tức</a></li></ul> -->
                                 </div>

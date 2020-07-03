@@ -205,7 +205,7 @@ h3.title {
 .dong1 {
     border: 3px dashed #0099FF;
     padding-bottom: 24px;
-    background: #ddd;
+    background: #eee;
     text-align: center;
 }
 .gachchan{
