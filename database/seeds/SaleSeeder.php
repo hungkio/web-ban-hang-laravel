@@ -18,7 +18,6 @@ class SaleSeeder extends Seeder
                 'sale_product_type'=>Product::CATEGORY_CODE['Đồng hồ'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
-                'sale_rank'=>rand(1,3),
             ];
             \App\Sale::create($data);
         }
@@ -29,7 +28,6 @@ class SaleSeeder extends Seeder
                 'sale_product_type'=>Product::CATEGORY_CODE['Máy tính bảng'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
-                'sale_rank'=>rand(1,3),
             ];
             \App\Sale::create($data);
         }
@@ -40,7 +38,6 @@ class SaleSeeder extends Seeder
                 'sale_product_type'=>Product::CATEGORY_CODE['Laptop'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
-                'sale_rank'=>rand(1,3),
             ];
             \App\Sale::create($data);
         }
@@ -51,7 +48,6 @@ class SaleSeeder extends Seeder
                 'sale_product_type'=>Product::CATEGORY_CODE['Phụ kiện'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
-                'sale_rank'=>rand(1,3),
             ];
             \App\Sale::create($data);
         }
@@ -62,7 +58,6 @@ class SaleSeeder extends Seeder
                 'sale_product_type'=>Product::CATEGORY_CODE['Điện thoại'],
                 'sale_begin' => now(),
                 'sale_end'=> now(),
-                'sale_rank'=>rand(1,3),
             ];
             \App\Sale::create($data);
         }

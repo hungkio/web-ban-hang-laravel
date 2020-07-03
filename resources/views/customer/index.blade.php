@@ -9,8 +9,8 @@
                     <div class="gb-mathanguachuong_myichi">
                         <marquee style="font-size: 25px;    font-weight: bold;    line-height: 17px; background-color: #81F7D8;   color: red;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
-                            Chương trình khuyến mãi: Giảm ngay 
-                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua 
+                            Chương trình khuyến mãi: Giảm ngay
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
                             <span  style="font-size: 20px; color: orange">{{App\Product::CATEGORY[$sales1->sale_product_type]}}</span> cho khách hàng bậc trở lên
                             <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
@@ -18,20 +18,7 @@
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                         </marquee>
-                           
-                      
-                    
 
-
-
-                     
-       
-            
-
-                       
-
-          
-        
 
                     </div>
                 </div>
@@ -39,6 +26,7 @@
             <!--SẢN PHẨM BÁN CHẠY-->
                 <section id="demos">
                     <div class="gb-mathanguachuong_myichi">
+
                         <div class="titleCategoryProduct_myichi">
                             <h4>Sản phẩm điện thoại</h4>
                             <div class="aaa234"></div>
@@ -52,6 +40,7 @@
                                             <div class="product_item_myichi">
                                                 <div class="product_item_img_myichi">
                                                 <a href="{{route('product.detail', $phone->id)}}">
+
                                                             <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
                                                         </a>
                                                     <!--SALE-->
@@ -73,6 +62,7 @@
                                                                 </button>
                                                             </div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -419,6 +409,7 @@
                         <div class="gb-latest-post-body-desktop">
                             <div class="owl-three-item-dotted owl-carousel owl-theme">
 
+
                                 <div class="item">
                                     <div class="blog-grid-item">
                                         <article class="post type-post">
@@ -430,6 +421,8 @@
                                                         </a>
                                                     </div>
                                                 </div>
+
+                        
                                                 <div class="gb-divider"></div>
                                                 <div class="gb-entry-content">
                                                     <header class="gb-entry-header">
@@ -438,13 +431,17 @@
                                                         </h2> -->
                                                     </header>
 
+
                                                     <div class="gb-divider"></div>
+
+                                               
 
                                                     <div class="entry-excerpt nhapnhay">
                                                         @foreach($saleslimit as $item)
                                                     
                                                             <p>Chương trình khuyến mãi: Giảm ngay 
                                                             <span style="font-size: 25px; color: red">{{$item -> sale_percent}}%</span> khi mua 
+
 
                                                             <span  style="font-size: 25px; color: red">{{App\Product::CATEGORY[$item->sale_product_type]}}</span> cho khách hàng bậc trở lên
                                                             <span  style="font-size: 25px; color: red; text-transform: uppercase;">{{App\Sale::RANK[$item->sale_rank]}}</span> từ ngày
@@ -454,6 +451,7 @@
                                 
                                                         @endforeach
                                                     </div>
+         
 
 
                                                 </div>
@@ -484,9 +482,10 @@
         font-weight: bold;
         animation: my 700ms infinite;
     }
-    @keyframes my { 
-     0% { color: #F8CD0A;  } 
+    @keyframes my {
+     0% { color: #F8CD0A;  }
      50% { color: #d33;  }
+
      100% { color: #F8CD0A;  } 
      } 
      .aaa234 {
@@ -496,3 +495,5 @@
     margin-left: 46%;
 }
 </style>
+
+    
