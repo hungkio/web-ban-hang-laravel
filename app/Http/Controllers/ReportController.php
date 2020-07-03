@@ -36,14 +36,24 @@ class ReportController extends Controller
             $out_prices +=  $current_count * $row->product_in_prices;
         }
         $totalGuests = $this->guestRepository->getAll()->count();
-        return view('admin.bao-cao', compact('totalGuests', 'count', 'out_prices'));
+        $rankSilver = $this->guestRepository->rankGuest(1)->count();
+        $rankGold = $this->guestRepository->rankGuest(2)->count();
+        $rankDiamon = $this->guestRepository->rankGuest(3)->count();
+        return view('admin.bao-cao', compact(
+            'totalGuests',
+            'count',
+            'out_prices',
+            'rankSilver',
+            'rankGold',
+            'rankDiamon'
+        ));
     }
     public function getData(Request $request)
     {
         $in_prices = 0;
         $count_sold = 0;
         $sales = $this->saleRepository->getAll()->count();
-        foreach ($this->billReporsitory->getAll() as $row) {
+        foreach ($this->billReporsitory->getBillConditon($request->only('start_date', 'end_date')) as $row) {
             $in_prices += $row->total_bill;
             $row = ltrim($row->products_list, '[',);
             $row = rtrim($row, ']',);

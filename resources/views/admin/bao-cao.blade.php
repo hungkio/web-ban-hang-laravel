@@ -74,8 +74,8 @@
         <div class="card ">
             <div class="card-body">
                 <h3 class="card-title col-md-12">Rank Silver</h3>
-                <span class="main-number" id="rankA">10000  -  </span>
-                <span class="main-number pt-1" id="rankARatio">25%</span>
+                <span class="main-number" id="rankA">{{$rankSilver}}  -  </span>
+                <span class="main-number pt-1" id="rankARatio">{{number_format($rankSilver / $totalGuests * 100, 2, '.', '')}}%</span>
             </div>
         </div>
     </div>
@@ -83,8 +83,8 @@
         <div class="card ">
             <div class="card-body">
                 <h3 class="card-title col-md-12">Rank Gold</h3>
-                <span class="main-number" id="rankB">5000  -  </span>
-                <span class="main-number pt-1" id="rankBRatio">25%</span>
+                <span class="main-number" id="rankB">{{$rankGold}}  -  </span>
+                <span class="main-number pt-1" id="rankBRatio">{{number_format($rankGold / $totalGuests * 100, 2, '.', '')}}%</span>
             </div>
         </div>
     </div>
@@ -92,8 +92,8 @@
         <div class="card ">
             <div class="card-body">
                 <h3 class="card-title col-md-12">Rank Diamon</h3>
-                <span class="main-number" id="rankC">10000  -  </span>
-                <span class="main-number pt-1" id="rankCRatio">25%</span>
+                <span class="main-number" id="rankC">{{$rankDiamon}}  -  </span>
+                <span class="main-number pt-1" id="rankCRatio">{{number_format($rankDiamon / $totalGuests * 100, 2, '.', '')}}%</span>
             </div>
         </div>
     </div>
