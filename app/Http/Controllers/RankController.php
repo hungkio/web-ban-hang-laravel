@@ -36,8 +36,8 @@ class RankController extends Controller
      */
     public function index()
     {
-        $rank = $this->rankReporsitory->getAll();
-        return view('rank.index', compact('rank'));
+        $ranks = $this->rankReporsitory->getAll();
+        return view('rank.index', compact('ranks'));
     }
 
     /**

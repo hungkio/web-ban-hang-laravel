@@ -36,27 +36,33 @@
                                             <div class="product_item_myichi">
                                                 <div class="product_item_img_myichi">
                                                 <a href="{{route('product.detail', $phone->id)}}">
-                                                    <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="product_item_text_myichi">
-                                                <h2><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
-                                                <div class="product_item_price_chitiet_myichi">
-                                                    <!--PRICES-->
-                                                    <div class="prices_myichi">
-                                                        <p class="prices-news_myichi">{{$phone->product_out_prices}} vnđ</p>
-                                                    </div>
-                                                    <div class="gb-btnmuahang_myichi">
-                                                        <input class="id-product" type="hidden" value="{{$phone->id}}">
-                                                        <button type="button" name="add-to-cart" id="add-to-cart-{{$phone->id}}" class="btn btn-addtocart_naustore btn_addCart" >
-                                                            <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
-                                                        </button>
+                                                            <img src="{{asset($phone->image)}}" alt="" class="img-responsive">
+                                                        </a>
+                                                    <!--SALE-->
+                                                
+                                                </div>
+                                                <div class="product_item_text_myichi">
+                                                   
+                                                    <div class="product_item_text_myichi">
+                                                        <h2 class="sanpham"><a href="/{{route('product.detail', $phone->id)}}">{{$phone->product_name}}</a></h2>
+                                                        <div class="product_item_price_chitiet_myichi">
+                                                            <!--PRICES-->
+                                                            <div class="prices_myichi">
+                                                                <p class="prices-news_myichi">Giá:{{$phone->product_out_prices}} vnđ</p>
+                                                                <p class="prices-old_myichi">Giá sỉ: Liên hệ</p>
+                                                            </div>
+                                                            <div class="gb-btnmuahang_myichi">
+                                                                <button type="button" name="add-to-cart" class="btn btn-addtocart_naustore btn_addCart" >
+                                                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i> Mua Ngay
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                     </div>
-                                </div>
+                                
 
                                 @endforeach
 
@@ -406,7 +412,7 @@
                                                 <div class="gb-entry-top">
                                                     <div class="thumbnail-img">
                                                         <a href="#" title="">
-                                                            <img src="images/aaaa.jpg" alt="" title="" class="img-responsive">
+                                                            <img src="images/sale.jpg" alt="" title="" class="img-responsive">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -419,19 +425,25 @@
                                                     </header>
                                                     <div class="gb-divider"></div>
 
+                                               
+
                                                     <div class="entry-excerpt nhapnhay">
                                                         @foreach($saleslimit as $item)
+                                                    
+                                                            <p>Chương trình khuyến mãi: Giảm ngay 
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_percent}}%</span> khi mua 
 
-                                                            <p>Chương trình khuyến mãi: Giảm ngay
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_percent}}%</span> khi mua từ ngày
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_begin}}</span> đến ngày
 
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_end}}</span></p>
+                                                            <span  style="font-size: 15px; color: red">{{App\Product::CATEGORY[$item->sale_product_type]}}</span> cho khách hàng bậc trở lên
+                                                            <span  style="font-size: 15px; color: red; text-transform: uppercase;">{{App\Sale::RANK[$item->sale_rank]}}</span> từ ngày
+
+                                                   
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_begin}}</span> đến ngày
+
+                                                            <span style="font-size: 15px; color: red">{{$item -> sale_end}}</span></p>
 
                                                         @endforeach
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </article>
@@ -456,15 +468,18 @@
 @endsection
 <style>
     .nhapnhay p:first-child,  .nhapnhay p:first-child span{
-        font-size: 27px;
+        font-size: 17px;
         font-weight: bold;
         animation: my 700ms infinite;
     }
     @keyframes my {
      0% { color: #F8CD0A;  }
      50% { color: #d33;  }
-     100% { color: #F8CD0A;  }
-     }
+
+
+     100% { color: #F8CD0A;  } 
+     } 
+
      .aaa234 {
     border: 2px solid red;
     width: 90px;
