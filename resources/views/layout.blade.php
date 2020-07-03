@@ -15,21 +15,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<<<<<<< HEAD
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+=======
+>>>>>>> 2057b47bb8c46231556a159a76b85ce8a0b68cdb
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <script src="css/jquery.min.js"></script>
     <script src="css/owl.carousel.js"></script>
+<<<<<<< HEAD
 
     <link rel="stylesheet" type="text/css" href="{{asset('css/style-myichi.css')}}">
 
+=======
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style-myichi.css')}}">
+>>>>>>> 2057b47bb8c46231556a159a76b85ce8a0b68cdb
 </head>
 <body>
     @include('header')
-    @include('slide')
     <div class="wrapper">
         <div class="content-wrapper pb-5">
             <section class="content">

@@ -1,5 +1,8 @@
 <header>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2057b47bb8c46231556a159a76b85ce8a0b68cdb
     <div class="gb-header_myichi">
 
         <div class="gb-header_myichi-topbar">
@@ -84,11 +87,18 @@
                                     <li><a href="#">Sản phẩm</a></li>
                                     <li class="has-sub"><a href="#">Chương trình khuyến mại</a></li>
                                     <li><a href="#">Báo cáo</a></li>
+<<<<<<< HEAD
 
                                     <li><a href="#">Quản lí</a></li>
                                     <!-- <li><a href="#">Tin tức</a></li></ul> -->
 
                                    
+=======
+                                    <li><a href="#">Quản lí</a></li>
+                                    <!-- <li><a href="#">Tin tức</a></li></ul> -->
+                                    <li><a href="#">Đăng xuất</a></li>
+
+>>>>>>> 2057b47bb8c46231556a159a76b85ce8a0b68cdb
                                 </div>
                             </div>
                         </nav>
