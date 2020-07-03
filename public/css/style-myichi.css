@@ -1409,7 +1409,7 @@ a:hover {
   font-family: "UVN Mua Thu"; }
 
 .gb-hotrotructuyen_myichi #hotro_myichi {
-  display: block;
+  display: block;}
   .gb-hotrotructuyen_myichi #hotro_myichi ul {
     list-style: none;
     border-bottom: 1px dashed #DDDDDD;
@@ -6313,3 +6313,40 @@ h1 {
     color: #0099FF;
     font-weight: 500;
     }
+.gb-kemchuanam_myichi .product_item_myichi .product_item_price_chitiet_myichi .gb-btnmuahang_myichi {
+      float: right; }
+.gb-btnmuahang_myichi a {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #0099FF;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 15px;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75); }
+  .gb-btnmuahang_myichi button {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #0099FF;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 15px;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.75); }
+    .gb-btnmuahang_myichi button:hover {
+      color: #fff;
+    }
+
+
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    .gb-btnmuahang_myichi a {
+      font-size: 12px;
+      padding: 10px; } }
+  .gb-btnmuahang_myichi a i {
+    margin-right: 10px; }
