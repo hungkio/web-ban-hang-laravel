@@ -45,7 +45,7 @@
                 <td>{{$row->sale_percent}}</td>
                 <td>{{$row->sale_begin}}</td>
                 <td>{{$row->sale_end}}</td>
-                <td>{{App\Sale::RANK[$row->sale_rank]}}</td>
+{{--                <td>{{App\Sale::RANK[$row->sale_rank]}}</td>--}}
                 <td>{{$row->created_at}}</td>
                 <td>{{$row->updated_at}}</td>
                 <td>

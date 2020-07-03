@@ -21,6 +21,7 @@ class Products extends Migration
             $table->integer('product_in_prices');
             $table->integer('product_out_prices');
             $table->longText('image')->nullable();
+            $table->longText('product_des')->nullable();
             $table->timestamps();
          });
     }

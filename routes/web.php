@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('edit/{id}', 'GuestController@edit')->name('edit');
     });
 
-    Route::prefix('ranks')->name('rank.')->group(function () {
+    Route::prefix('rank')->name('rank.')->group(function () {
         Route::get('/', 'RankController@index')->name('index');
         Route::get('create', 'RankController@create')->name('create');
         Route::post('store', 'RankController@store')->name('store');

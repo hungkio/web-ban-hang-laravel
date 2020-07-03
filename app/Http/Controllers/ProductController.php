@@ -34,7 +34,7 @@ class ProductController extends Controller
         }
         try {
             $data = $request->only('product_name', 'product_counts',
-                                   'products_type','product_in_prices','product_out_prices', 'image');
+                                   'products_type','product_in_prices','product_out_prices', 'image','product_des');
             $this->productReporsitory->create($data);
             return redirect()->route('product.index')
             ->with('success', 'Created Success!');
@@ -80,7 +80,7 @@ class ProductController extends Controller
         }
         try {
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',
-                                                                  'products_type','product_in_prices','product_out_prices', 'image'));
+                                                                  'products_type','product_in_prices','product_out_prices', 'image','product_des'));
             return redirect()->route('product.index')
             ->with('success', 'Updated Success!');
         } catch (Exception $e) {
