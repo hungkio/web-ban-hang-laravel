@@ -16,8 +16,8 @@ class Bills extends Migration
         Schema::create('Bills', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('guest_id');
-            $table->integer('products_list');
-            $table->integer('sales');
+            $table->string('products_list');
+            $table->integer('sales')->nullable();
             $table->integer('total_bill');
             $table->timestamps();
             //
