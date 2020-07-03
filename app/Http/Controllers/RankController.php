@@ -16,7 +16,7 @@ class RankController extends Controller
     public function edit($id)
     {
         $rank = $this->rankReporsitory->find($id);
-        return view('rank.edit', compact('ranks'));
+        return view('rank.edit', compact('rank'));
     }
     public function store(RankRequest $request)
     {
@@ -37,7 +37,7 @@ class RankController extends Controller
     public function index()
     {
         $rank = $this->rankReporsitory->getAll();
-        return view('rank.index', compact('ranks'));
+        return view('rank.index', compact('rank'));
     }
 
     /**
