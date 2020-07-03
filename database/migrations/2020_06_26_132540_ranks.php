@@ -15,7 +15,8 @@ class Ranks extends Migration
     {
         Schema::create('Ranks',function(Blueprint $table){
             $table->increments('id');
-            $table->string('rank_name');
+            $table->integer('rank_code');
+            $table->integer('sale_percent');
             $table->integer('bill_count');
             $table->integer('total_bills');
             $table->timestamps();

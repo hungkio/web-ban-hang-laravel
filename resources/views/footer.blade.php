@@ -14,9 +14,9 @@
                         <div class="col-md-3">
 
                             <div class="gb-footer1_myichi">
-                                <h4 class="abcd">Thông tin về công ty</h4>
+                                <h4 class="abcd">Thông tin về chúng tôi</h4>
 
-                                <ul>
+                                <!-- <ul>
 
                                     <li><i class="fa fa-globe" aria-hidden="true"></i> Team 58TH4</li>
 
@@ -29,7 +29,7 @@
                                     <li><i class="fa fa-envelope-open-o" aria-hidden="true"></i> Email: @@gmail.com</li>
 
 
-                                </ul>
+                                </ul> -->
 
                             </div>
 
@@ -40,7 +40,7 @@
                             <div class="gb-footer2_myichi">
 
                                 <h4 class="abcd">Quy định chính sách</h4>
-
+<!-- 
                                 <ul>
 
                                     <li><a href="/chinh-sach-doi-tra">Chích sách đổi trả</a></li>
@@ -52,7 +52,7 @@
 
 
                                 </ul>
-
+ -->
 
                             </div>
 

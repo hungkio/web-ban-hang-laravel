@@ -10,13 +10,14 @@
 </div>
 @endif
 <div class="container">
+<h2 class="themkhachhang">Thêm khách hàng</h2>
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('guest.store')}}">
         @csrf
-        <h2>Thêm khách hàng</h2>
+
         <div class="form-group">
             <label for="firstName" class="col-sm-3 control-label">Tên Khách Hàng</label>
             <div class="col-sm-9">
-                <input id="name" class="form-control error-border" name="name" type="text" autofocus>
+                <input id="name" class="form-control error-border" name="name" type="text" autofocus value="">
                 @error('name')
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
@@ -35,7 +36,7 @@
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Tuổi</label>
             <div class="col-sm-9">
-                <input id="age" class="form-control error-border" name="age" type="text">
+                <input id="age" class="form-control error-border" name="age" type="number" value="">
                 @error('age')
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
@@ -53,7 +54,7 @@
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Email</label>
             <div class="col-sm-9">
-                <input id="email" class="form-control error-border" name="email" type="text">
+                <input id="email" class="form-control error-border" name="email" type="text" value="">
                 @error('email')
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
@@ -65,10 +66,46 @@
                 <input id="address" class="form-control error-border" name="address" type="text" value="">
             </div>
         </div>
+        <div class="save">
         <button type="submit" class="btn btn-primary btn-block">Save</button>
-        <a href="{{route('guest.index')}}">Back</a>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 0px; "> <a href="{{route('guest.index')}}">Quay lại</a></button>
+        </div>
+
+
     </form>
 </div>
 @endsection
 @section('script')
 @endsection
+<style>
+    .form-control {
+    display: block;
+    width: 50%;}
+    form#validateForm {
+    width: 64%;
+    margin-left: 14%;
+    /* text-align: center; */
+}
+.themkhachhang {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 35px;
+    color: red;
+}
+.btn-block {
+    width: 20% !important;
+    float: left;
+    margin-right: 45px;
+}
+.save{
+
+    margin-left: 40%;
+    margin-bottom: 100px;
+color:black;
+}
+.save a{
+    color: white;
+}
+</style>

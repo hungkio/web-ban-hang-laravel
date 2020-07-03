@@ -16,10 +16,9 @@ class Sales extends Migration
         Schema::create('Sales', function (Blueprint $table) {
             $table->increments('id');
             $table->string('sale_product_type');
-            $table->string('sale_product_name');
+            $table->integer('sale_percent');
             $table->date('sale_begin');
             $table->date('sale_end');
-            $table->string('sale_rank');
             $table->timestamps();
         });
     }

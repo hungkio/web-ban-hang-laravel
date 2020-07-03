@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\RankRequest;
 use App\Repositories\RankRepository;
 
-class GuestController extends Controller
+class RankController extends Controller
 {
     protected $rankReporsitory;
     public function __construct(RankRepository $rankReporsitory)
@@ -36,7 +36,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $rank = $this->rankReporsitory->getAll();
+        $ranks = $this->rankReporsitory->getAll();
         return view('rank.index', compact('ranks'));
     }
 
@@ -74,14 +74,4 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        try {
-            $this->rankReporsitory->delete($id);
-            return redirect()->route('rank.index')
-            ->with('success', 'Deleted Success!');
-        } catch (Exception $e) {
-            return back()->with('error', $e->getMessage());
-        }
-    }
 }

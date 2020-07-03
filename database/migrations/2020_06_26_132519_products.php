@@ -17,9 +17,11 @@ class Products extends Migration
             $table->increments('id');
             $table->string('product_name');
             $table->integer('product_counts');
-            $table->string('products_type');
+            $table->integer('products_type');
             $table->integer('product_in_prices');
             $table->integer('product_out_prices');
+            $table->longText('image')->nullable();
+            $table->longText('product_des')->nullable();
             $table->timestamps();
          });
     }

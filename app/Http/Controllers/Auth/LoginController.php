@@ -54,7 +54,7 @@ class LoginController extends Controller
                 'username'  => $username,
                 'password' => $password,
             ])) {
-                return redirect('product');
+                return redirect()->route('product.show');
             } else {
                 // Kiểm tra không đúng sẽ hiển thị thông báo lỗi
                 Session::flash('error', 'sai');

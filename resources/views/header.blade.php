@@ -1,83 +1,5 @@
 <header>
-
     <div class="gb-header_myichi">
-
-        <div class="gb-header_myichi-topbar">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-10">
-
-                        <div class="gb-header_myichi-topbar-left">
-
-                            <ul style="text-align: right;">
-
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Giao hàng toàn quốc cung cấp sỉ/lẻ </li>
-
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0931 45 35 75 - Hỗ trợ 24/7</li>
-                                <li><i class="fa fa-paper-plane" aria-hidden="true"></i>  Đổi trả lên đến 15 ngày
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                    <!-- <div class="col-md-3">
-
-                        <div class="gb-header_myichi-topbar-right">
-
-                            <ul>
-
-                                <li>
-
-                                    <a href="/login" title="">
-
-                                        <i class="fa fa-user" aria-hidden="true"></i> Đăng nhập
-
-                                    </a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="/register" title="">
-
-                                        <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng ký
-
-                                    </a>
-
-                                </li>
-
-                                <li></li>
-
-                            </ul>
-
-                        </div>
-
-                    </div> -->
-
-                    <div class="col-md-2">
-
-                        <div class="gb-header_myichi-cart_myichi">
-                            <a href="/gio-hang" title="">
-                                <i class="fa fa-shopping-bag" aria-hidden="true"></i> Giỏ hàng (0)
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
 
         <div class="gb-header-bottom_myichi sticky-menu">
 
@@ -85,7 +7,7 @@
 
                 <div class="gb-header-bottom_myichi-left">
 
-                    <h1><a href="/"><img src="{{asset('images/logo.jpg')}}" alt="" class="img-responsive"></a></h1>
+                    <h1><a href="/"><img src="{{asset('images/logo2.png')}}" alt="" class="img-responsive"></a></h1>
 
                 </div>
 
@@ -95,12 +17,20 @@
                         <div class="main-navigation uni-menu-text">
                             <div class="cssmenu">
                                 <ul>
-                                    <li><a href="#">Trang chủ</a></li>
-                                    <li><a href="#">Giới thiệu</a></li>
-                                    <li class="has-sub"><a href="#">Sản phẩm</a></li>
-                                    <li><a href="#">Đặt hàng nhanh</a></li>
-                                    <li><a href="#">Liên hệ</a></li>
-                                    <li><a href="#">Tin tức</a></li></ul>
+                                    <li><a href="{{route('product.show')}}">Trang chủ</a></li>
+                                    <li><a href="{{route('product.index')}}">Sản phẩm</a></li>
+                                    <li class="has-sub"><a href="{{route('sale.index')}}">Chương trình khuyến mại</a></li>
+                                    <li><a href="{{route('report.index')}}">Báo cáo</a></li>
+                                    <li class="hiasda"><a href="#">Quản lí</a>
+                                        <ul class="dmcuocdoi">
+                                            <li><a href="{{route('guest.index')}}">Khách Hàng</a></li>
+                                            <li><a href="{{route('bill.index')}}">Hóa Đơn</a></li>
+                                            <li><a href="{{route('rank.index')}}">Hạng</a></li>
+                                            <li><a href="{{route('user.index')}}">Tài khoản</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{route('logout')}}">Đăng xuất</a></li>
+
                                 </div>
                             </div>
                         </nav>
@@ -110,5 +40,29 @@
                 </div>
 
             </div>
-
         </header>
+        <script>
+            $(function () {
+                var count = 0;
+                if (count == 0) {
+                    $('#go_to_cart').prop('disabled' , true);
+                }
+                $('.btn_addCart').click(function () {
+                    alert("Đã Thêm Sản Phẩm Vào Giỏ Hàng");
+                    count++;
+                    $('#go_to_cart').prop('disabled' , false);
+                    $('#count').text(count);
+                    let Html =
+                    '<div class="row"><div class="col-md-6 col-sm-6 col-xs-6"><input type="hidden" name="ids[]" value="'
+                    +$(this).parent().find('.id-product').val() +  '"><div>'
+                    +$(this).parent().parent().siblings("h2").text() + ' :</div></div><div class="col-md-6 col-sm-6 col-xs-6">'
+                    + $(this).parent().parent().parent().find('.prices-news_myichi').html() + '</div></div>';
+                    $('#form-cart').find('div.modal-body').append(Html);
+                });
+            });
+        </script>
+        <style>
+            .dmcuocdoi{
+                display: none;
+            }
+        </style>
