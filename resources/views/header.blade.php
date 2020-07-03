@@ -1,5 +1,5 @@
 <header>
-
+           
     <div class="gb-header_myichi">
 
         <div class="gb-header_myichi-topbar">
@@ -14,10 +14,10 @@
 
                             <ul style="text-align: right;">
 
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Giao hàng toàn quốc cung cấp sỉ/lẻ </li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"><img src="images/icon11.png" style="width: 57px;" alt=""></i>Giao hàng toàn quốc cung cấp sỉ/lẻ </li>
 
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> Hotline: 0931 45 35 75 - Hỗ trợ 24/7</li>
-                                <li><i class="fa fa-paper-plane" aria-hidden="true"></i>  Đổi trả lên đến 15 ngày
+                                <li><i class="fa fa-phone" aria-hidden="true"> <img src="images/icon22.jpg" style="width: 57px;" alt=""></i> Hotline: 0931 45 35 75 - Hỗ trợ 24/7</li>
+                                <li><i class="fa fa-paper-plane" aria-hidden="true"> <img src="images/icon3.png" style="width: 57px;" alt=""></i>  Đổi trả lên đến 15 ngày
                                 </li>
 
 
@@ -99,7 +99,7 @@
                                     <li><a href="#">Sản phẩm</a></li>
                                     <li class="has-sub"><a href="#">Chương trình khuyến mại</a></li>
                                     <li><a href="#">Báo cáo</a></li>
-                                    <li><a href="#">Đăng xuất</a></li>
+                                    <li><a href="#">Quản lí</a></li>
                                     <!-- <li><a href="#">Tin tức</a></li></ul> -->
                                 </div>
                             </div>

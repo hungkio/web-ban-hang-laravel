@@ -22,6 +22,7 @@
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
             </div>
+
         </div>
         <div class="form-group">
             <label for="email" class="col-sm-3 control-label">Tên Sản Phẩm</label>
@@ -30,8 +31,19 @@
                 @error('sale_product_name')
                 <span class=" col-6 error-val">{{ $message  }}</span>
                 @enderror
-            </div>
+
+            
         </div>
+        <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Phẩn trăm</label>
+                <div class="col-sm-9">
+                    <input id="sale_percent" class="form-control error-border" name="sale_percent" type="number" value="{{$sale->sale_percent}}">
+                    @error('sale_percent')
+                    <span class=" col-6 error-val">{{ $message  }}</span>
+                    @enderror
+                </div>
+
+            </div>
         <div class="form-group">
             <label for="password" class="col-sm-3 control-label">Thời gian bắt đầu</label>
             <div class="col-sm-9">
@@ -72,3 +84,9 @@
 @endsection
 @section('script')
 @endsection
+<style>
+    
+    input#sale_percent {
+    margin-top: 10px;
+}
+</style>
