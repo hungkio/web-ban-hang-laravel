@@ -135,7 +135,7 @@ th.guest9.sorting {
     width: 14% !important;
 }
 th.guest8.sorting {
-    width: 12% !important;
+    width: 13% !important;
 }
 th.guest3.sorting {
     width: 7% !important;
@@ -143,6 +143,18 @@ th.guest3.sorting {
 }
 th.guest2.sorting {
     width: 12% !important;
+}
+th.guest1 {
+    width: 2% !important;
+}
+th.guest3 {
+    width: 7%;
+}
+th.guest8 {
+    width: 11%;
+}
+th.guest9 {
+    width: 13%;
 }
 
 </style>

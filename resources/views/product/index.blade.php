@@ -109,6 +109,8 @@ tr.bang1 th{
 button.add1 {
     height: 32px;
     width: 100px;
+    
+    margin-bottom: 20px;
 }
 td {
     text-align: center;
