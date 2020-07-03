@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+@include('slide')
 <div class="gb-content">
     <!--CONTENT-->
     <div class="Content-Main_myichi">
@@ -10,29 +11,12 @@
                         <marquee style="font-size: 25px;    font-weight: bold;    line-height: 17px; background-color: #81F7D8;   color: red;">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                             Chương trình khuyến mãi: Giảm ngay
-                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua
-                            <span  style="font-size: 20px; color: orange">{{App\Product::CATEGORY[$sales1->sale_product_type]}}</span> cho khách hàng bậc trở lên
-                            <span  style="font-size: 20px; color: orange; text-transform: uppercase;">{{App\Sale::RANK[$sales1->sale_rank]}}</span> từ ngày
+                            <span style="font-size: 20px; color: orange">{{$sales1 -> sale_percent}}%</span> khi mua từ ngày
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_begin}}</span> đến ngày
 
                             <span style="font-size: 20px; color: orange">{{$sales1 -> sale_end}}</span>
                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FireIcon.svg/1200px-FireIcon.svg.png" alt="" style="width: 2%;">
                         </marquee>
-                           
-                      
-                    
-
-
-
-                     
-       
-            
-
-                       
-
-          
-        
-
                     </div>
                 </div>
             </div>
@@ -45,10 +29,10 @@
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
-                                <div class="owl-carousel owl-theme">
+                                <div class="phone owl-carousel owl-theme">
                                 @foreach($phones as $phone)
                                     <div class="item">
-                                    
+
                                             <div class="product_item_myichi">
                                                 <div class="product_item_img_myichi">
                                                 <a href="{{route('product.detail', $phone->id)}}">
@@ -70,20 +54,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                     </div>
-                                    
+                                </div>
+
                                 @endforeach
-                                
-                            
-                                
+
+
+
                                 </div>
                                 <script>
                                 $(document).ready(function() {
-                                    var owl = $('.owl-carousel');
+                                    var owl = $('.phone');
                                     owl.owlCarousel({
                                     margin: 10,
-                                    nav: true,
+                                    nav: false,
+                                    dot: false,
+                                    nav: false,
                                     loop: true,
                                     responsive: {
                                         0: {
@@ -103,7 +90,7 @@
                         </div>
 
                     </div>
-                    
+
                 </section>
                 <section id="demos">
                     <div class="gb-mathanguachuong_myichi">
@@ -116,14 +103,14 @@
                                 <div class="owl-carousel owl-theme">
                                 @foreach($laptops as $laptop)
                                 <div class="item">
-                                    
+
                                     <div class="product_item_myichi">
                                         <div class="product_item_img_myichi">
                                             <a href="#">
                                                 <img src="{{asset($laptop->image)}}" alt="" class="img-responsive">
                                             </a>
                                             <!--SALE-->
-                                        
+
                                         </div>
                                         <div class="product_item_text_myichi">
                                                     <h2 class="sanpham"><a href="/#">{{$laptop->product_name}}</a></h2>
@@ -141,15 +128,15 @@
                                                     </div>
                                                 </div>
                                     </div>
-                                
+
                             </div>
-                                    
-                                
-                                    
+
+
+
                                 @endforeach
-                                
-                            
-                                
+
+
+
                                 </div>
                                 <script>
                                 $(document).ready(function() {
@@ -176,7 +163,7 @@
                         </div>
 
                     </div>
-                    
+
                 </section>  <section id="demos">
                     <div class="gb-mathanguachuong_myichi">
                         <div class="titleCategoryProduct_myichi">
@@ -186,17 +173,17 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <div class="owl-carousel owl-theme">
-                            
+
                                 @foreach($tablets as $tablet)
                                 <div class="item">
-                                    
+
                                     <div class="product_item_myichi">
                                         <div class="product_item_img_myichi">
                                         <a href="#">
                                                     <img src="{{asset($tablet->image)}}" alt="" class="img-responsive">
                                                 </a>
                                             <!--SALE-->
-                                        
+
                                         </div>
                                         <div class="product_item_text_myichi">
                                         <h2 class="sanpham"><a href="/#">{{$tablet->product_name}}</a></h2>
@@ -214,15 +201,15 @@
                                         </div>
                                     </div>
                                     </div>
-                                    
+
                                 </div>
-                                    
-                                
-                                    
+
+
+
                                 @endforeach
-                                
-                            
-                                
+
+
+
                                 </div>
                                 <script>
                                 $(document).ready(function() {
@@ -249,7 +236,7 @@
                         </div>
 
                     </div>
-                    
+
                 </section>
 
                 <section id="demos">
@@ -261,17 +248,17 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <div class="owl-carousel owl-theme">
-                            
+
                             @foreach($watchs as $watch)
                                 <div class="item">
-                                    
+
                                     <div class="product_item_myichi">
                                         <div class="product_item_img_myichi">
                                         <a href="#">
                                             <img src="{{asset($watch->image)}}" alt="" class="img-responsive">
                                         </a>
                                             <!--SALE-->
-                                        
+
                                         </div>
                                         <div class="product_item_text_myichi">
                                         <h2 class="sanpham"><a href="/#">{{$watch->product_name}}</a></h2>
@@ -289,15 +276,15 @@
                                         </div>
                                     </div>
                                     </div>
-                                    
+
                                 </div>
-                                    
-                                
-                                    
+
+
+
                                 @endforeach
-                                
-                            
-                                
+
+
+
                                 </div>
                                 <script>
                                 $(document).ready(function() {
@@ -324,9 +311,9 @@
                         </div>
 
                     </div>
-                    
+
                 </section>
-              
+
                 <section id="demos">
                     <div class="gb-mathanguachuong_myichi">
                         <div class="titleCategoryProduct_myichi">
@@ -336,17 +323,17 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <div class="owl-carousel owl-theme">
-                            
+
                                     @foreach($accessorys as $accessory)
                                         <div class="item">
-                                            
+
                                             <div class="product_item_myichi">
                                                 <div class="product_item_img_myichi">
                                                     <a href="#">
                                                         <img src="{{asset($accessory->image)}}" alt="" class="img-responsive">
                                                     </a>
                                                     <!--SALE-->
-                                                
+
                                                 </div>
                                                 <div class="product_item_text_myichi">
                                                     <h2 class="sanpham"><a href="/#">{{$accessory->product_name}}</a></h2>
@@ -365,15 +352,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                 
-                                        
-                                    
-                                        
+
+
+
+
+
                                     @endforeach
-                                   
-                            
-                                
+
+
+
                                 </div>
                                 <script>
                                 $(document).ready(function() {
@@ -400,9 +387,9 @@
                         </div>
 
                     </div>
-                    
+
                 </section>
-               
+
                 <div class="gb-latest-post_myichi">
                     <div class="titleCategoryProduct_myichi">
                         <h4>Chương trình khuyến mãi</h4>
@@ -430,21 +417,17 @@
                                                             <a href="/#" rel="">Chương trình khuyến mãi</a>
                                                         </h2> -->
                                                     </header>
-
                                                     <div class="gb-divider"></div>
 
                                                     <div class="entry-excerpt nhapnhay">
                                                         @foreach($saleslimit as $item)
-                                                    
-                                                            <p>Chương trình khuyến mãi: Giảm ngay 
-                                                            <span style="font-size: 25px; color: red">{{$item -> sale_percent}}%</span> khi mua 
 
-                                                            <span  style="font-size: 25px; color: red">{{App\Product::CATEGORY[$item->sale_product_type]}}</span> cho khách hàng bậc trở lên
-                                                            <span  style="font-size: 25px; color: red; text-transform: uppercase;">{{App\Sale::RANK[$item->sale_rank]}}</span> từ ngày
+                                                            <p>Chương trình khuyến mãi: Giảm ngay
+                                                            <span style="font-size: 25px; color: red">{{$item -> sale_percent}}%</span> khi mua từ ngày
                                                             <span style="font-size: 25px; color: red">{{$item -> sale_begin}}</span> đến ngày
 
                                                             <span style="font-size: 25px; color: red">{{$item -> sale_end}}</span></p>
-                                
+
                                                         @endforeach
                                                     </div>
 
@@ -458,10 +441,10 @@
                         </div>
                     <div>
                 <div>
-            
 
 
-            
+
+
         </div>
     </div>
 
@@ -480,8 +463,8 @@
     @keyframes my {
      0% { color: #F8CD0A;  }
      50% { color: #d33;  }
-     100% { color: #F8CD0A;  } 
-     } 
+     100% { color: #F8CD0A;  }
+     }
      .aaa234 {
     border: 2px solid red;
     width: 90px;
