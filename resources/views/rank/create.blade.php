@@ -12,12 +12,12 @@
 <div class="container">
     <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('rank.store')}}">
         @csrf
-        <h2>Thêm Chương Trình Khuyến Mãi</h2>
+        <h2>Thêm Rank</h2>
         <div class="form-group">
             <label for="lastName" class="col-sm-3 control-label">Rank</label>
             <div class="col-sm-9" style="width: 24%;">
                 <select id="rank_name" class="form-control error-border" name="rank_name" type="text">
-                    @foreach (App\Sale::RANK as $item)
+                    @foreach (App\Rank::RANK as $item)
                         <option value="{{App\Rank::RANK_CODE[$item]}}">{{$item}}</option>
                     @endforeach
                 </select>
