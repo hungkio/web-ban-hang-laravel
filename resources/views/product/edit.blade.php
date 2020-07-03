@@ -11,15 +11,15 @@
 @endif
 <div class="container">
 <div class="col-sm-2">
-        
+
         </div>
         <div class="col-sm-8">
             <form class="form-horizontal" role="form" id="validateForm" method="POST" action="{{route('product.update', $products->id)}}" enctype="multipart/form-data">
                 @method('put')
                 @csrf
                 <h2 class="suasanpham">Sửa Thông Tin Sản Phẩm</h2>
-            
-            
+
+
                     <div class="form-group">
                         <label for="firstName" class="col-sm-2 control-label">Tên sản phẩm</label>
                         <div class="col-sm-10">
@@ -79,19 +79,19 @@
                             <img class="img-circle elevation-2 avatar-size" id="preview" src="{{$products->image ? asset($products->image) : '/images/default-user-icon.png'}}">
                         </div>
                     </div>
-            
-            
-            
+
+
+
                 <div class="save">
                     <button type="submit" class="btn btn-primary btn-block">Save</button>
                     <button type="submit" class="btn btn-primary btn-block" style="margin-top: 0px; ">  <a href="{{route('product.index')}}">Quay lại</a></button>
-            
+
                 </div>
-                
+
             </form>
         </div>
     <div class="col-sm-2" style="display:none;">
-        
+
         </div>
 </div>
 @endsection
@@ -121,7 +121,7 @@ h2.suasanpham {
     margin-right: 45px;
 }
 .save{
- 
+
     margin-left: 40%;
     margin-bottom: 100px;
 color:black;

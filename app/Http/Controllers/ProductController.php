@@ -72,11 +72,12 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
+        $image_url = $this->productReporsitory->find($id)->first()->image;
         if ($request->image_file) {
             $request->image_file->storeAs('public/images', 'product' . $id . '.png');
             $request['image'] = ('storage/images/product' . $id . '.png');
         } else {
-            $request['image'] = null;
+            $request['image'] = $image_url;
         }
         try {
             $this->productReporsitory->update($id, $request->only('product_name', 'product_counts',

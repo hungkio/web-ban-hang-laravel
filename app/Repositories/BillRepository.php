@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Product;
+use Carbon\Carbon;
 use App\Bill;
 use App\Guest;
 
@@ -32,6 +33,12 @@ class BillRepository
     public function findArray($ids)
     {
         return Product::find($ids);
+    }
+    public function getBillConditon($request)
+    {
+        return Bill::where('created_at', '>=', Carbon::parse($request['start_date']))
+        ->where('created_at', '<=', Carbon::parse($request['end_date']))
+        ->get();
     }
 }
 

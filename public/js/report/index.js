@@ -9,7 +9,9 @@ $(function () {
             data: $('#time_form').serialize(),
             success : function(res) {
                 $('#new_guest').text(res.guests)
-                $('#total_guest').text(res.totalGuests)
+                $('#count_sold').text(res.count_sold)
+                $('#in_prices').text(res.in_prices)
+                $('#sales').text(res.sales)
             }
         })
     });

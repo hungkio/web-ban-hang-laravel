@@ -49,9 +49,11 @@
                     <a class="btn btn-success" href="{{route('user.edit', $row->id)}}">
                         Chỉnh Sửa
                     </a>
+                    @if(auth()->id() != $row->id)
                     <a class="btn btn-danger" href="{{route('user.delete', $row->id)}}" onclick="return confirm('Are you sure you want to delete this item')">
                         Xóa
                     </a>
+                    @endif
                 </td>
             </tr>
             @endforeach
@@ -61,6 +63,7 @@
 
 @endsection
 @section('script')
+<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="/js/guest/index.js"></script>
 @endsection
 <style>
@@ -96,7 +99,7 @@ tr.bang1 {
 .btn-success {
     color: #fff;
     margin-right: 10px;
-   
+
     background-color: #5cb85c;
     border-color: #4cae4c;
 }

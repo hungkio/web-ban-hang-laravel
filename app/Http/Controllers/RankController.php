@@ -74,14 +74,4 @@ class RankController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        try {
-            $this->rankReporsitory->delete($id);
-            return redirect()->route('rank.index')
-            ->with('success', 'Deleted Success!');
-        } catch (Exception $e) {
-            return back()->with('error', $e->getMessage());
-        }
-    }
 }

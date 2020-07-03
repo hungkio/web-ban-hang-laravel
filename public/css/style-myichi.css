@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*Định nghĩa màu cho website*/
 /*Định nghĩa font-family cho website*/
-@import url(../plugin/fonts/roboto/roboto.css);
-@import url(../plugin/fonts/muathu/muathu.css);
 /*Định nghĩa font-size cho website*/
 h1 {
   font-size: 24px;
@@ -148,7 +146,7 @@ a:hover {
   position: relative; }
   @media screen and (max-width: 991px) {
     .gb-header-bottom_myichi {
-      background: transparent; } 
+      background: transparent; }
       .gb-header-bottom_myichi .gb-header-bottom_myichi-left {
         width: 140px;
         left: 20px !important;
@@ -213,8 +211,8 @@ a:hover {
   color: #fff;
   /*border-top: 5px solid #2cb400;*/ }
   .footer-main-content_myichi .gb-footer1_myichi {
-    
-    
+
+
     border-radius: 5px; }
     .footer-main-content_myichi .gb-footer1_myichi ul li {
       display: block;
@@ -470,7 +468,8 @@ a:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); }
   .gb-main-menu .cssmenu li:hover > ul {
     left: auto;
-    margin-top: 15px; }
+
+    }
   .gb-main-menu .cssmenu.align-right li:hover > ul {
     right: 0; }
   .gb-main-menu .cssmenu ul ul ul {
@@ -1317,7 +1316,6 @@ a:hover {
 
 .uni-footer-newletter_myichi {
   padding: 30px 15px;
-  background: url("../images/biathu.png") no-repeat center center;
   background-size: contain;
   margin: 50px 0; }
   @media screen and (max-width: 991px) {
@@ -1412,7 +1410,6 @@ a:hover {
 
 .gb-hotrotructuyen_myichi #hotro_myichi {
   display: block;
-  background: url(../images/icons/bg_hotro.png) left 0 no-repeat; }
   .gb-hotrotructuyen_myichi #hotro_myichi ul {
     list-style: none;
     border-bottom: 1px dashed #DDDDDD;
@@ -2020,7 +2017,6 @@ a:hover {
   overflow: hidden;
   padding-left: 20px;
   position: relative;
-  background: url("../images/banner/2.png") no-repeat center center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2087,7 +2083,6 @@ a:hover {
   overflow: hidden;
   padding-left: 20px;
   position: relative;
-  background: url("../images/banner/3.png") no-repeat center center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3120,7 +3115,6 @@ a:hover {
 
 .uni-footer-newletter_myichi {
   padding: 30px 15px;
-  background: url("../images/biathu.png") no-repeat center center;
   background-size: contain;
   margin: 50px 0; }
   @media screen and (max-width: 991px) {
@@ -3335,7 +3329,6 @@ a:hover {
     position: relative;
     margin-bottom: 30px; }
     .gb-latest-post_myichi .titleCategoryProduct_myichi h4 {
-      background: url(../images/tieude_giua.png) center bottom no-repeat;
       padding-bottom: 15px;
       margin-bottom: 10px;
       font-family: "UVN Mua Thu";
@@ -4038,7 +4031,6 @@ a:hover {
     line-height: 24px;
     padding: 20px 0 10px 0; }
   .title-main .under-line {
-    background: url("../images/icons/line.PNG") no-repeat;
     height: 50px;
     background-position: center; }
 
@@ -4585,7 +4577,6 @@ a:hover {
   position: relative;
   margin-bottom: 30px; }
   .gb-mathanguachuong_myichi .titleCategoryProduct_myichi h4 {
-    background: url(../images/tieude_giua.png) center bottom no-repeat;
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-family: "UVN Mua Thu";
@@ -4624,6 +4615,7 @@ a:hover {
   border: 1px solid #efebeb;
   margin-bottom: 30px; }
   .gb-mathanguachuong_myichi .product_item_myichi .product_item_img_myichi {
+    height: 316px;
     overflow: hidden; }
     .gb-mathanguachuong_myichi .product_item_myichi .product_item_img_myichi img {
       width: 100%;
@@ -4713,7 +4705,6 @@ a:hover {
   position: relative;
   margin-bottom: 30px; }
   .gb-kemchuanam_myichi .titleCategoryProduct_myichi h4 {
-    background: url(../images/tieude_giua.png) center bottom no-repeat;
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-family: "UVN Mua Thu";
@@ -4814,7 +4805,6 @@ a:hover {
   position: relative;
   margin-bottom: 30px; }
   .gb-duongdamat_myichi .titleCategoryProduct_myichi h4 {
-    background: url(../images/tieude_giua.png) center bottom no-repeat;
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-family: "UVN Mua Thu";
@@ -5347,7 +5337,6 @@ a:hover {
   position: relative;
   margin-bottom: 30px; }
   .gb-duongdatoanthan_myichi .titleCategoryProduct_myichi h4 {
-    background: url(../images/tieude_giua.png) center bottom no-repeat;
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-family: "UVN Mua Thu";
@@ -5543,7 +5532,6 @@ a:hover {
   position: relative;
   margin-bottom: 30px; }
   .gb-videoclip_myichi .titleCategoryProduct_myichi h4 {
-    background: url(../images/tieude_giua.png) center bottom no-repeat;
     padding-bottom: 15px;
     margin-bottom: 10px;
     font-family: "UVN Mua Thu";
@@ -5559,7 +5547,7 @@ a:hover {
     line-height: 22px; }
 
 .gb-videoclip_myichi .gb-videoclip_myichi-item .gb-videoclip_myichi-item-img img {
-  width: 100%; 
+  width: 100%;
     height: 270px;}
 
 .gb-videoclip_myichi .gb-videoclip_myichi-item .gb-videoclip_myichi-item-img:hover {
@@ -5752,7 +5740,7 @@ a:hover {
         height: 50px;
         background-color: #247809;
         border: 1px solid #247809;
-         
+
         font-size: 14px;
         font-weight: bold;
         line-height: 2.77;
@@ -5768,7 +5756,7 @@ a:hover {
           -o-transition: all 0.5s;
           transition: all 0.5s; }
   .uni-checkout-body .vk-checkout-order-left h3 {
-     
+
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -5778,7 +5766,7 @@ a:hover {
   .uni-checkout-body .vk-checkout-order-left table {
     width: 100%; }
     .uni-checkout-body .vk-checkout-order-left table thead tr th {
-       
+
       font-size: 14px;
       font-weight: bold;
       line-height: 2.14;
@@ -5786,13 +5774,13 @@ a:hover {
       color: #404040;
       text-transform: uppercase; }
     .uni-checkout-body .vk-checkout-order-left table tbody tr td {
-       
+
       font-size: 14px;
       line-height: 2.14;
       text-align: left;
       color: #666666; }
     .uni-checkout-body .vk-checkout-order-left table tfoot tr th {
-       
+
       font-size: 14px;
       font-weight: 500;
       line-height: 2.14;
@@ -5812,7 +5800,7 @@ a:hover {
     padding-top: 60px;
     padding-bottom: 43px; }
     .uni-checkout-body .vk-checkout-billing-left h3 {
-       
+
       font-size: 18px;
       font-weight: bold;
       text-align: left;
@@ -5822,7 +5810,7 @@ a:hover {
     .uni-checkout-body .vk-checkout-billing-left p {
       margin-bottom: 27px; }
       .uni-checkout-body .vk-checkout-billing-left p label {
-         
+
         font-size: 14px;
         font-weight: normal;
         line-height: 1.57;
@@ -5830,7 +5818,7 @@ a:hover {
         color: #22292d;
         margin-bottom: 10px; }
       .uni-checkout-body .vk-checkout-billing-left p .required {
-         
+
         font-size: 18px;
         font-weight: 900;
         line-height: 1.22;
@@ -5841,7 +5829,7 @@ a:hover {
       background-color: #ffffff;
       border: 1px solid #e0e0e0;
       padding: 0 20px;
-       
+
       font-size: 14px;
       line-height: 0;
       text-align: left;
@@ -5854,7 +5842,7 @@ a:hover {
     border: 1px solid #e0e0e0;
     margin-top: 10px; }
     .uni-checkout-body .vk-check-coupon h3 {
-       
+
       font-size: 18px;
       font-weight: bold;
       text-align: left;
@@ -5864,17 +5852,17 @@ a:hover {
     .uni-checkout-body .vk-check-coupon .gb-form-register {
       margin-top: 20px; }
     .uni-checkout-body .vk-check-coupon .required {
-       
+
       font-size: 18px;
       font-weight: 900;
       line-height: 1.22;
       color: #247809; }
     .uni-checkout-body .vk-check-coupon p {
-       
+
       font-size: 16px;
       line-height: 22px; }
     .uni-checkout-body .vk-check-coupon label {
-       
+
       font-size: 16px;
       font-weight: bold;
       text-align: left;
@@ -5899,7 +5887,7 @@ a:hover {
     margin-bottom: 10px;
     background: #fff;
     padding: 14px 20px;
-     
+
     font-size: 14px;
     line-height: 2.14;
     text-align: left;
@@ -5926,7 +5914,7 @@ a:hover {
     background-color: #ffffff;
     border: 1px solid  #e0e0e0;
     padding: 20px;
-     
+
     font-size: 14px;
     line-height: 1.57;
     text-align: left;
@@ -5938,7 +5926,7 @@ a:hover {
     background-color: #ffffff;
     border: 1px solid  #e0e0e0;
     padding: 20px;
-     
+
     font-size: 14px;
     line-height: 1.57;
     text-align: left;
@@ -5960,7 +5948,7 @@ a:hover {
       border-radius: 3px; }
     .uni-checkout-body .entry-content-wrapper .vk-checkout-login input[type="submit"] {
       border: 1px solid #247809;
-       
+
       font-size: 14px;
       font-weight: bold;
       line-height: 1.69;
@@ -5983,7 +5971,7 @@ a:hover {
       border: solid 1px #aeaeae;
       margin-left: 20px; }
     .uni-checkout-body .entry-content-wrapper .vk-checkout-login .woocommerce-form__label-for-checkbox span {
-       
+
       font-size: 14px;
       line-height: 1.57;
       text-align: left;
@@ -5993,7 +5981,7 @@ a:hover {
       margin: 0;
       padding-top: 15px; }
       .uni-checkout-body .entry-content-wrapper .vk-checkout-login .lost_password a {
-         
+
         font-size: 14px;
         line-height: 1.57;
         text-align: right;
@@ -6222,10 +6210,10 @@ h1 {
   position: relative;
   margin-bottom: 30px;
 }.gb-mathanguachuong_myichi .titleCategoryProduct_myichi h4 {
-  
+
   padding-bottom: 15px;
   margin-bottom: 10px;
- 
+
   font-size: 45px;
   text-align: center;
   color: #0099FF;
@@ -6287,12 +6275,12 @@ h1 {
   line-height: 22px;
 }
 .gb-btnmuahang_myichi {
-  
+
     float: right;
-    margin-top: -57px; }
+   /* margin-top: -57px;*/ }
   .gb-kemchuanam_myichi .product_item_myichi .product_item_price_chitiet_myichi .gb-btnmuahang_myichi {
     float: right; }
-   
+
   .gb-btnmuahang_myichi button {
   display: inline-block;
   border-radius: 20px;

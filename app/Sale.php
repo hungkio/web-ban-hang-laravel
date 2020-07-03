@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
 
-	 const RANK_CODE = [
+    const RANK_CODE = [
         'diamon' => 3,
         'gold' => 2,
         'silver' => 1,
@@ -19,8 +19,8 @@ class Sale extends Model
         1 => 'silver',
     ];
 
-  protected $table = 'sales';
-  protected $fillable = [
-    'sale_product_type',  'sale_percent',  'sale_begin',  'sale_end',
-  ];
+    protected $table = 'sales';
+    protected $fillable = [
+        'sale_product_type',  'sale_percent',  'sale_begin',  'sale_end',
+    ];
 }
